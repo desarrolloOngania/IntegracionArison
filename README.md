@@ -11,9 +11,9 @@ Arison WMS|TMS - API REST INTEGRACION
 - [Documentación detallada de la API](#documentacion)
   - [Swagger](#swagger)
   - [Ambientes](#ambientes)
-  - [Descripción de los ambientes](#ambientes)
-  - [Gestión de las configuraciones](#ambientes)
-  - [Selección del ambiente](#ambientes)plojson)
+  - [Descripción de los ambientes](#ambientesdescripcion)
+  - [Gestión de las configuraciones](#gestion)
+  - [Selección del ambiente](#ambientesseleccion)
   
 
 <a name="generalidades"></a>
@@ -71,6 +71,7 @@ Implementado Arison y contratado el modulo de integracion comienzan a estar disp
 
 [<sub>Volver</sub>](#inicio)
 
+<a name="Swagger"></a>
 ### Swagger
 Para una exploración más detallada de la API y ejemplos interactivos, te invitamos a visitar nuestra documentación técnica en Swagger:  
 
@@ -91,16 +92,18 @@ Realizar pruebas: Interactúa directamente con la API para verificar su funciona
 
 Para garantizar la calidad y estabilidad de nuestra aplicación, hemos implementado un sistema de ambientes de trabajo. Estos ambientes se diferencian principalmente por la URL de la API.
 
+<a name="ambientesdescripcion"></a>
 ### Descripción de los ambientes
 * **Desarrollo:** Este ambiente está destinado a los desarrolladores para realizar pruebas, depurar código y desarrollar nuevas funcionalidades. Las configuraciones en este ambiente pueden ser modificadas con frecuencia.
 * **Producción:** Este es el ambiente en vivo donde los usuarios interactúan con la aplicación. Las configuraciones en este ambiente son estables y se modifican con cuidado para evitar interrupciones en el servicio.
-
+<a name="gestion"></a>
 ### Gestión de las configuraciones
 Las diferencias entre los ambientes se gestionan principalmente a través de:
 
 * **Variables de entorno:** Estas variables permiten configurar de manera dinámica diferentes aspectos de la aplicación, como la URL de la base de datos, las claves de API y otras configuraciones sensibles.
 * **Archivos de configuración:** Algunos ajustes específicos pueden estar definidos en archivos de configuración separados para cada ambiente.
 
+<a name="ambientesseleccion"></a>
 ### Selección del ambiente
 La selección del ambiente se realiza de la siguiente manera:
 

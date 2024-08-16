@@ -78,58 +78,6 @@ Implementado Arison y contratado el modulo de integracion comienzan a estar disp
 
 Para utilizar **Arison WMS|TMS** debe tener instalada la versión vigente del sistema o la inmediata anterior. Comuníquese con su distribuidor para mayor información.
 
-<a name="ambientes"></a>
-
-#### Ambientes
-
-[<sub>Volver</sub>](#inicio)
-
-• Ambiente de testeo
-
-Para configurar el ambiente de testeo desde Tango Sync debe asociar una empresa de nube con una empresa ejemplo de Tango Gestión o Tango Punto de Venta.
-
-• Ambiente de producción
-
-Para configurar el ambiente de producción desde Tango Sync debe asociar una empresa de nube con una empresa operativa de Tango Gestión o Tango Punto de Venta.
-
-<a name="asociarapi"></a>
-
-### Asociar aplicación con API
-
-[<sub>Volver</sub>](#inicio)
-
-Luego de haber vinculado una empresa de nube con una empresa de Tango Gestión o Tango Punto de Venta, acceda a Tango Tiendas / API para obtener el un Access Token que le permitirá enviar órdenes de pedido a Tango.
-
-A continuación, explicamos la configuración a aplicar desde Tango Tiendas, para cargar órdenes de pedido a través de una interfaz API.
-
-Presione el botón &quot;Obtener&quot; e introduzca un nombre de referencia para la **API**.
-
-Al presionar el botón &quot;Aceptar&quot; se generará un Access token con el cual se podrá conectar la **API** con **Tango Tiendas**.
-
-![imagenapi](https://github.com/TangoSoftware/ApiTiendas/blob/master/api.jpg)
-
-A partir de ese momento ya puede comenzar a utilizar la **API** en **Tango Tiendas** y manejar sus ventas desde **Tango Gestión o Tango Punto de Venta**.
-
-El Access token obtenido se debe utilizar en el header de la llamada en la key "accesstoken".
-
-**La URL del servicio de API para verificación es (POST):**
-
-[https://tiendas.axoft.com/api/Aperture/dummy](https://tiendas.axoft.com/api/Aperture/dummy)
-
-**Formato de respuestas del metodo POST Dummy:**
-
-En caso de que el acceso sea válido:
-
-```
-{"Status":0,"Message":"Valid AccessToken","Data":null,"isOk":true}
-```
-
-En caso de que el acceso sea inválido:
-
-```
-{"Status":1,"Message":"Invalid AccessToken ","Data":null,"isOk":false}
-```
-
 <a name="documentacion"></a>
 
 ## Documentación detallada de la API
@@ -148,6 +96,34 @@ Con Swagger podras
 Explorar los endpoints: Descubre todos los recursos disponibles y las operaciones que puedes realizar.  
 Ver ejemplos: Observa ejemplos prácticos de solicitudes y respuestas.  
 Realizar pruebas: Interactúa directamente con la API para verificar su funcionamiento (solicitar habilitacion y token).  
+
+<a name="ambientes"></a>
+
+#### Ambientes
+
+Para garantizar la calidad y estabilidad de nuestra aplicación, hemos implementado un sistema de ambientes de trabajo. Estos ambientes se diferencian principalmente por la URL de la API.
+
+### Descripción de los ambientes
+* **Desarrollo:** Este ambiente está destinado a los desarrolladores para realizar pruebas, depurar código y desarrollar nuevas funcionalidades. Las configuraciones en este ambiente pueden ser modificadas con frecuencia.
+* **Producción:** Este es el ambiente en vivo donde los usuarios interactúan con la aplicación. Las configuraciones en este ambiente son estables y se modifican con cuidado para evitar interrupciones en el servicio.
+
+### Gestión de las configuraciones
+Las diferencias entre los ambientes se gestionan principalmente a través de:
+
+* **Variables de entorno:** Estas variables permiten configurar de manera dinámica diferentes aspectos de la aplicación, como la URL de la base de datos, las claves de API y otras configuraciones sensibles.
+* **Archivos de configuración:** Algunos ajustes específicos pueden estar definidos en archivos de configuración separados para cada ambiente.
+
+### Selección del ambiente
+La selección del ambiente se realiza de la siguiente manera:
+
+* **Durante el desarrollo:** Los desarrolladores configuran localmente las variables de entorno o utilizan herramientas de desarrollo que permiten cambiar el ambiente de forma sencilla.
+* **En producción:** El ambiente de producción se configura de forma fija y no puede ser modificado por los usuarios finales.
+
+### Tabla comparativa
+| Ambiente | URL de ejemplo | Propósito | Características clave |
+|---|---|---|---|
+| Desarrollo | http://api.arison.ongania.com:4508/dev | Pruebas y desarrollo | Configuraciones flexibles, datos de prueba |
+| Producción | https://api.arison.ongania.com | Uso en producción | Configuraciones estables, datos reales |
 
 <a name="notificaciones"></a>
 

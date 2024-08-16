@@ -7,6 +7,7 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Estructura estándar de una URL en Arison](#generalidades)
   - [Formatos de datos](#asociarapi)
   - [Autenticación](#asociarapi)
+  - [Consulta de datos](#asociarapi)
 - [Documentación detallada de la API](#documentacion)
   - [Novedades](#novedades)
   - [Datos del JSON](#djson)

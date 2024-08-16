@@ -4,8 +4,9 @@ Arison WMS|TMS - API REST INTEGRACION
 
 - [Generalidades](#generalidades)
   - [Integraciones soportadas por Arison](#versiones)
-  - [Generalidades](#generalidades)
-  - [Asociar aplicación con API](#asociarapi)
+  - [Estructura estándar de una URL en Arison](#generalidades)
+  - [Formatos de datos](#asociarapi)
+  - [Autenticación](#asociarapi)
 - [Documentación detallada de la API](#documentacion)
   - [Novedades](#novedades)
   - [Datos del JSON](#djson)
@@ -59,11 +60,6 @@ Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar da
 ### Autenticación
 
 Para proteger los recursos de la API, Arison utiliza el metodo bearer token
-
-### Formatos de datos
-Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar datos entre el cliente y el servidor. JSON es un formato ligero y fácil de leer tanto por humanos como por máquinas.
-
-
 
 ### Consulta de datos
 

@@ -42,29 +42,16 @@ DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuar
 
 ## Estructura estándar de una URL en Arison
 
-Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos:
+Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementacion pero mantiene el standars
 
 
-[https://api.arison.com/[versión]/[recurso]/[id]
-versión: Indica la versión de la API.
+[https://urlvariable.com/[api]/[recurso]/[id]
 recurso: Especifica el tipo de recurso sobre el que se va a realizar la operación (usuarios, productos, etc.).
 id: Identificador único del recurso (opcional, según la operación).
 Ejemplo:
 
-https://api.arison.com/v1/usuarios/123
-Esta URL se utilizaría para obtener la información del usuario con el ID 123.
-](https://api.arison.com/[versión]/[recurso]/[id]
-
-
-* **versión:** Indica la versión de la API.
-* **recurso:** Especifica el tipo de recurso sobre el que se va a realizar la operación (usuarios, productos, etc.).
-* **id:** Identificador único del recurso (opcional, según la operación).
-
-**Ejemplo:**
-
-https://api.arison.com/v1/usuarios/123
-
-Esta URL se utilizaría para obtener la información del usuario con el ID 123.
+https://api.arison.com/api/clientes/123
+Esta URL se utilizaría para obtener la información del cliente con el ID 123.
 
 ### Formatos de datos
 
@@ -72,19 +59,16 @@ Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar da
 
 ### Autenticación
 
-Para proteger los recursos de la API, Arison utiliza [método de autenticación utili)
-Formatos de datos
+Para proteger los recursos de la API, Arison utiliza el metodo bearer token
+
+### Formatos de datos
 Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar datos entre el cliente y el servidor. JSON es un formato ligero y fácil de leer tanto por humanos como por máquinas.
 
-Autenticación
-Para proteger los recursos de la API, Arison utiliza [método de autenticación utilizado, por ejemplo, token de acceso, API key].
+
 
 ##### Consulta de datos
 
-Los datos comienzan a estar disponibles cuando se cumplen las siguientes condiciones:  
-La versión requerida de ventas para implementar Tango Tiendas API es: 19.01.000.605 (o superior).  
-correspondiente al hotfix ftp://ftp.axoft.com/version_interna/HotfixPublicados/HotFix_19_01_000_0437.exe (o posterior)
-Es necesario que la licencia de **Tango Gestión y Tango Punto de Venta Argentina** tenga la aplicación **Tango Tiendas Full** activada.
+Implementado Arison y contratado el modulo de integracion comienzan a estar disponible la API con datos. 
 
 <a name="generalidades"></a>
 

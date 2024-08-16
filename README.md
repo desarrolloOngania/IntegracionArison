@@ -70,14 +70,6 @@ Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar da
 
 Implementado Arison y contratado el modulo de integracion comienzan a estar disponible la API con datos. 
 
-<a name="generalidades"></a>
-
-#### Generalidades
-
-[<sub>Volver</sub>](#inicio)
-
-Para utilizar **Arison WMS|TMS** debe tener instalada la versión vigente del sistema o la inmediata anterior. Comuníquese con su distribuidor para mayor información.
-
 <a name="documentacion"></a>
 
 ## Documentación detallada de la API

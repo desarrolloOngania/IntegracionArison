@@ -36,9 +36,9 @@ Métodos HTTP soportados por Arison
 Arison soporta los siguientes métodos HTTP, cada uno con una función específica:
 
 GET: Se utiliza para obtener datos de un recurso específico. Por ejemplo, para obtener la información de un usuario en particular.  
-POST: Se utiliza para crear un nuevo recurso. Por ejemplo, para registrar un nuevo usuario.
-PUT: Se utiliza para actualizar un recurso existente. Por ejemplo, para modificar la información de un usuario.
-DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuario.
+POST: Se utiliza para crear un nuevo recurso. Por ejemplo, para registrar un nuevo usuario.  
+PUT: Se utiliza para actualizar un recurso existente. Por ejemplo, para modificar la información de un usuario.  
+DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuario.  
 
 ## Estructura estándar de una URL en Arison
 

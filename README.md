@@ -4,10 +4,10 @@ Arison WMS|TMS - API REST INTEGRACION
 
 - [Generalidades](#generalidades)
   - [Integraciones soportadas por Arison](#versiones)
-  - [Estructura estándar de una URL en Arison](#generalidades)
-  - [Formatos de datos](#asociarapi)
-  - [Autenticación](#asociarapi)
-  - [Consulta de datos](#asociarapi)
+  - [Estructura estándar de una URL en Arison](#url)
+  - [Formatos de datos](#datos)
+  - [Autenticación](#autenticacion)
+  - [Consulta de datos](#consulta)
 - [Documentación detallada de la API](#documentacion)
   - [Novedades](#novedades)
   - [Datos del JSON](#djson)
@@ -24,8 +24,6 @@ Arison WMS|TMS - API REST INTEGRACION
 ## Generalidades
 
 <a name="versiones"></a>
-
-
 ### Integraciones soportadas por Arison
 
 Arison ofrece una robusta API REST que permite a los desarrolladores integrar su aplicación con una amplia variedad de sistemas y servicios. Esta API sigue los estándares RESTful, lo que garantiza una integración sencilla y flexible.
@@ -41,6 +39,7 @@ POST: Se utiliza para crear un nuevo recurso. Por ejemplo, para registrar un nue
 PUT: Se utiliza para actualizar un recurso existente. Por ejemplo, para modificar la información de un usuario.  
 DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuario.  
 
+<a name="url"></a>
 ### Estructura estándar de una URL en Arison
 
 Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementacion pero mantiene el standars
@@ -54,14 +53,17 @@ Ejemplo:
 https://api.arison.com/api/clientes/123
 Esta URL se utilizaría para obtener la información del cliente con el ID 123.
 
+<a name="datos"></a>
 ### Formatos de datos
 
 Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar datos entre el cliente y el servidor. JSON es un formato ligero y fácil de leer tanto por humanos como por máquinas.
 
+<a name="autenticacion"></a>
 ### Autenticación
 
 Para proteger los recursos de la API, Arison utiliza el metodo bearer token
 
+<a name="consulta"></a>
 ### Consulta de datos
 
 Implementado Arison y contratado el modulo de integracion comienzan a estar disponible la API con datos. 

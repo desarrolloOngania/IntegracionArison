@@ -9,15 +9,12 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Autenticación](#autenticacion)
   - [Consulta de datos](#consulta)
 - [Documentación detallada de la API](#documentacion)
-  - [Novedades](#novedades)
-  - [Datos del JSON](#djson)
-  - [Ordenes por Lote](#lote)
-  - [Tablas de Referencia](#tablas)
-  - [Ejemplo de JSON de una órden](#ejemplojson)
-- [Ambientes](#subida)
-  - [Configuración](#configuracion)
-  - [Conceptos básicos](#ConceptosBasicos)
-  - [Recursos de consulta](#recursos)
+  - [Swagger](#swagger)
+  - [Ambientes](#ambientes)
+  - [Descripción de los ambientes](#ambientes)
+  - [Gestión de las configuraciones](#ambientes)
+  - [Selección del ambiente](#ambientes)plojson)
+  
 
 <a name="generalidades"></a>
 
@@ -74,6 +71,7 @@ Implementado Arison y contratado el modulo de integracion comienzan a estar disp
 
 [<sub>Volver</sub>](#inicio)
 
+### Swagger
 Para una exploración más detallada de la API y ejemplos interactivos, te invitamos a visitar nuestra documentación técnica en Swagger:  
 
 http://loginarison.ongania.com:4508/swagger/index.html  

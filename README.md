@@ -66,7 +66,7 @@ Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar da
 
 
 
-##### Consulta de datos
+### Consulta de datos
 
 Implementado Arison y contratado el modulo de integracion comienzan a estar disponible la API con datos. 
 
@@ -76,9 +76,9 @@ Implementado Arison y contratado el modulo de integracion comienzan a estar disp
 
 [<sub>Volver</sub>](#inicio)
 
-Para una exploración más detallada de la API y ejemplos interactivos, te invitamos a visitar nuestra documentación técnica en Swagger:
+Para una exploración más detallada de la API y ejemplos interactivos, te invitamos a visitar nuestra documentación técnica en Swagger:  
 
-Enlace: http://loginarison.ongania.com:4508/swagger/index.html
+http://loginarison.ongania.com:4508/swagger/index.html  
 En este enlace encontrarás una descripción completa de todos los endpoints, parámetros, respuestas y ejemplos de uso. 
 
 ![Interfaz de Swagger de Arison](https://github.com/desarrolloOngania/IntegracionArison/blob/4cc80d2cf38c888837ae85feccd8d32f73021a26/Arison_Swagger.png)

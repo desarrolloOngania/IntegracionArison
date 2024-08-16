@@ -7,7 +7,7 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Generalidades](#generalidades)
   - [Ambientes](#ambientes)
   - [Asociar aplicación con API](#asociarapi)
-- [Recepción de órdenes API](#ordenes)
+- [Documentación detallada de la API](#documentacion)
   - [Novedades](#novedades)
   - [Datos del JSON](#djson)
   - [Ordenes por Lote](#lote)
@@ -130,9 +130,9 @@ En caso de que el acceso sea inválido:
 {"Status":1,"Message":"Invalid AccessToken ","Data":null,"isOk":false}
 ```
 
-<a name="ordenes"></a>
+<a name="documentacion"></a>
 
-## Recepción de órdenes API
+## Documentación detallada de la API
 
 [<sub>Volver</sub>](#inicio)
 

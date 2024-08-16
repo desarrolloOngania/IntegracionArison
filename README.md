@@ -2,7 +2,7 @@
 Arison WMS|TMS - API REST INTEGRACION
 =======
 
-- [Instalación](#instalacion)
+- [Generalidades](#generalidades)
   - [Integraciones soportadas por Arison](#versiones)
   - [Generalidades](#generalidades)
   - [Ambientes](#ambientes)
@@ -18,9 +18,9 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Conceptos básicos](#ConceptosBasicos)
   - [Recursos de consulta](#recursos)
 
-<a name="instalacion"></a>
+<a name="generalidades"></a>
 
-## Instalación
+## Generalidades
 
 <a name="versiones"></a>
 
@@ -40,7 +40,7 @@ POST: Se utiliza para crear un nuevo recurso. Por ejemplo, para registrar un nue
 PUT: Se utiliza para actualizar un recurso existente. Por ejemplo, para modificar la información de un usuario.  
 DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuario.  
 
-## Estructura estándar de una URL en Arison
+### Estructura estándar de una URL en Arison
 
 Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementacion pero mantiene el standars
 
@@ -77,10 +77,6 @@ Implementado Arison y contratado el modulo de integracion comienzan a estar disp
 [<sub>Volver</sub>](#inicio)
 
 Para utilizar **Arison WMS|TMS** debe tener instalada la versión vigente del sistema o la inmediata anterior. Comuníquese con su distribuidor para mayor información.
-
-Esta versión soporta órdenes de pedido únicamente en moneda nacional argentina.
-
-Aceptando hasta 2 decimales en los datos de importes y precios.
 
 <a name="ambientes"></a>
 

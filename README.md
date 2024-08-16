@@ -91,7 +91,7 @@ Realizar pruebas: Interactúa directamente con la API para verificar su funciona
 
 <a name="ambientes"></a>
 
-#### Ambientes
+## Ambientes
 
 Para garantizar la calidad y estabilidad de nuestra aplicación, hemos implementado un sistema de ambientes de trabajo. Estos ambientes se diferencian principalmente por la URL de la API.
 

@@ -35,15 +35,17 @@ Una API REST (Representational State Transfer) es una interfaz de programación 
 Métodos HTTP soportados por Arison
 Arison soporta los siguientes métodos HTTP, cada uno con una función específica:
 
-GET: Se utiliza para obtener datos de un recurso específico. Por ejemplo, para obtener la información de un usuario en particular.
+GET: Se utiliza para obtener datos de un recurso específico. Por ejemplo, para obtener la información de un usuario en particular.  
 POST: Se utiliza para crear un nuevo recurso. Por ejemplo, para registrar un nuevo usuario.
 PUT: Se utiliza para actualizar un recurso existente. Por ejemplo, para modificar la información de un usuario.
 DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuario.
 
-Estructura estándar de una URL en Arison
+## Estructura estándar de una URL en Arison
+
 Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos:
 
-https://api.arison.com/[versión]/[recurso]/[id]
+
+[https://api.arison.com/[versión]/[recurso]/[id]
 versión: Indica la versión de la API.
 recurso: Especifica el tipo de recurso sobre el que se va a realizar la operación (usuarios, productos, etc.).
 id: Identificador único del recurso (opcional, según la operación).
@@ -51,7 +53,26 @@ Ejemplo:
 
 https://api.arison.com/v1/usuarios/123
 Esta URL se utilizaría para obtener la información del usuario con el ID 123.
+](https://api.arison.com/[versión]/[recurso]/[id]
 
+
+* **versión:** Indica la versión de la API.
+* **recurso:** Especifica el tipo de recurso sobre el que se va a realizar la operación (usuarios, productos, etc.).
+* **id:** Identificador único del recurso (opcional, según la operación).
+
+**Ejemplo:**
+
+https://api.arison.com/v1/usuarios/123
+
+Esta URL se utilizaría para obtener la información del usuario con el ID 123.
+
+### Formatos de datos
+
+Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar datos entre el cliente y el servidor. JSON es un formato ligero y fácil de leer tanto por humanos como por máquinas.
+
+### Autenticación
+
+Para proteger los recursos de la API, Arison utiliza [método de autenticación utili)
 Formatos de datos
 Arison utiliza el formato JSON (JavaScript Object Notation) para intercambiar datos entre el cliente y el servidor. JSON es un formato ligero y fácil de leer tanto por humanos como por máquinas.
 

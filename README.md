@@ -136,17 +136,16 @@ En caso de que el acceso sea inválido:
 
 [<sub>Volver</sub>](#inicio)
 
-**La URL del servicio de API para órdenes es:**
+Para una exploración más detallada de la API y ejemplos interactivos, te invitamos a visitar nuestra documentación técnica en Swagger:
 
-[https://tiendas.axoft.com/api/Aperture/order](https://tiendas.axoft.com/api/Aperture/order)
+Enlace: http://loginarison.ongania.com:4508/swagger/index.html
+En este enlace encontrarás una descripción completa de todos los endpoints, parámetros, respuestas y ejemplos de uso. 
 
-Tenga en cuenta los siguientes temas:
+Con Swagger podras    
 
-- [Notificaciones](#notificaciones)
-
-- [Preguntas frecuentes](#faqs)
-
-- [Novedades en el JSON de la orden](#novedades)
+Explorar los endpoints: Descubre todos los recursos disponibles y las operaciones que puedes realizar.  
+Ver ejemplos: Observa ejemplos prácticos de solicitudes y respuestas.  
+Realizar pruebas: Interactúa directamente con la API para verificar su funcionamiento (solicitar habilitacion y token).  
 
 <a name="notificaciones"></a>
 

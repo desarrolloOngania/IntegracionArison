@@ -42,7 +42,7 @@ DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuar
 <a name="url"></a>
 ### Estructura estándar de una URL en Arison
 
-Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementación pero mantiene el standar.
+Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementación pero mantiene el estándar.
 
 
 https://urlvariable.com/[api]/[recurso]/[id]
@@ -66,7 +66,7 @@ Para proteger los recursos de la API, Arison utiliza el metodo bearer token
 <a name="consulta"></a>
 ### Consulta de datos
 
-Implementado Arison y contratado el modulo de integracion comienzan a estar disponible la API con datos. 
+Implementado Arison y contratado el modulo de integración comienzan a estar disponible la API con datos. 
 
 <a name="documentacion"></a>
 
@@ -83,7 +83,7 @@ En este enlace encontrarás una descripción completa de todos los endpoints, pa
 
 ![Interfaz de Swagger de Arison](https://github.com/desarrolloOngania/IntegracionArison/blob/4cc80d2cf38c888837ae85feccd8d32f73021a26/Arison_Swagger.png)
 
-Con Swagger podras    
+Con Swagger podrás    
 
 Explorar los endpoints: Descubre todos los recursos disponibles y las operaciones que puedes realizar.  
 Ver ejemplos: Observa ejemplos prácticos de solicitudes y respuestas.  
@@ -93,7 +93,7 @@ Realizar pruebas: Interactúa directamente con la API para verificar su funciona
 
 ## Ambientes
 
-Para garantizar la calidad y estabilidad de nuestra aplicación, hemos implementado un sistema de ambientes de trabajo. Estos ambientes se diferencian principalmente por la URL de la API.
+Para garantizar la calidad y estabilidad de nuestra aplicación, hemos implementado un sistema de ambiente de trabajo. Estos ambientes se diferencian principalmente por la URL de la API.
 
 <a name="ambientesdescripcion"></a>
 ### Descripción de los ambientes

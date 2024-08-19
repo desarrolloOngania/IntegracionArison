@@ -186,3 +186,103 @@ peso: Peso del artículo en la unidad correspondiente. Ejemplo: 2.5.
 idMedidaVolumen: Identificador de la unidad de medida del volumen del artículo. Ejemplo: 2.
 volumen: Volumen del artículo en la unidad correspondiente. Ejemplo: 1.75.
 ```
+
+Ejemplo de JSON basado en RequerimientoDto
+
+```json
+{
+  "empresa": "M",
+  "codCd": "CD001",
+  "codEstado": "E001",
+  "estado": "Pendiente",
+  "cantPedid": 100.0,
+  "cantADes": 80.0,
+  "cantPenD": 20.0,
+  "codArticu": "ART123",
+  "nRenglon": 1,
+  "nroPedido": "P12345",
+  "talonPed": "T001",
+  "codRequisisor": "C001",
+  "nombreRequisisor": "Cliente Ejemplo",
+  "fechaPedi": "2024-08-16T00:00:00",
+  "fechaEntr": "2024-08-20T00:00:00",
+  "descripcion": "Artículo Ejemplo",
+  "descAdic": "Descripción adicional del artículo",
+  "unidadMedidaSeleccionada": "UN",
+  "equivaleV": 1.0,
+  "descCond": "Condición de venta ejemplo",
+  "transporte": "Transporte Ejemplo",
+  "localidad": "Localidad Ejemplo",
+  "direccion": "Calle Ejemplo 123",
+  "provincia": "Provincia Ejemplo",
+  "leyenda1": "Leyenda 1",
+  "leyenda2": "Leyenda 2",
+  "leyenda3": "Leyenda 3",
+  "leyenda4": "Leyenda 4",
+  "leyenda5": "Leyenda 5",
+  "idDireccionEntrega": "DIR001",
+  "codTransp": "TR001",
+  "generador": "Pedidos",
+  "codDeposito": "DEP001",
+  "tReq": "PED",
+  "idTabla": "TBL001",
+  "tablaOrigen": "Tabla Origen Ejemplo",
+  "fechaApru": "2024-08-18T00:00:00",
+  "clase": "A",
+  "tipoCliente": "FINAL", 
+  "vendedor": "Vendedor Ejemplo", 
+  "tCompAsoc": "T001", 
+  "nCompAsoc": "C001",
+  "precio": 100.0, 
+  "monCte": "ARS", 
+  "depoProveedor": "DEP001" 
+}
+
+Descripción de los campos:
+empresa: 'M' para base de datos maestra o 'B' para base de datos alternativa.
+codCd: Código del centro de distribución que atenderá la demanda.
+codEstado: Código que representa el estado del pedido.
+estado: Descripción del estado del pedido.
+cantPedid: Cantidad pedida originalmente en el pedido.
+cantADes: Cantidad habilitada para recolectarse.
+cantPenD: Cantidad no remitida aún.
+codArticu: Código único del artículo solicitado.
+nRenglon: Número del renglón del requerimiento dentro del pedido.
+nroPedido: Número de identificación del pedido.
+talonPed: Código del talonario asociado al pedido.
+codRequisisor: Código del cliente o requisitor que solicitó el pedido.
+nombreRequisisor: Nombre del cliente o requisitor.
+fechaPedi: Fecha de ingreso del pedido en el sistema.
+fechaEntr: Fecha solicitada para la entrega del pedido.
+descripcion: Descripción del artículo solicitado.
+descAdic: Descripción adicional del artículo.
+unidadMedidaSeleccionada: Unidad de medida utilizada para expresar la cantidad del artículo.
+equivaleV: Equivalencia entre unidades de medida y bultos.
+descCond: Descripción de la condición de venta (OBLIGATORIO para remisión).
+transporte: Nombre del transporte para la entrega (OBLIGATORIO para remisión).
+localidad: Localidad de la dirección de entrega (OBLIGATORIO para remisión).
+direccion: Dirección de entrega del pedido (OBLIGATORIO para remisión).
+provincia: Provincia de la dirección de entrega (OBLIGATORIO para remisión).
+leyenda1: Primera leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
+leyenda2: Segunda leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
+leyenda3: Tercera leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
+leyenda4: Cuarta leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
+leyenda5: Quinta leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
+idDireccionEntrega: Identificador único de la dirección de entrega (OBLIGATORIO para remisión).
+codTransp: Código del transporte (OBLIGATORIO para remisión).
+generador: Fuente o generador del pedido, en este caso 'Pedidos'.
+codDeposito: Código del depósito seleccionado para abastecer la demanda.
+tReq: Tipo de requerimiento, en este caso 'PED'.
+idTabla: Identificador único de la tabla de origen.
+tablaOrigen: Nombre de la tabla de origen.
+fechaApru: Fecha de aprobación del pedido (puede ser nula).
+clase: Categoría del cliente (por ejemplo, A, B, C).
+tipoCliente: Tipo de cliente según la categorización (por ejemplo, FINAL, FRANQUICIA, DISTRIBUIDOR).
+vendedor: Nombre del vendedor asociado al pedido.
+tCompAsoc: Tipo de comprobante asociado al pedido.
+nCompAsoc: Número del comprobante asociado.
+precio: Precio unitario del artículo (puede ser nulo).
+monCte: Moneda corriente utilizada en el pedido.
+depoProveedor: Código del depósito que abastece la demanda.
+```
+

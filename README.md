@@ -136,7 +136,7 @@ La selección del ambiente se realiza de la siguiente manera:
   "tiempoDescarga": 15,
   "generarPasswordEntrega": true
 }
-```
+
 Descripción de los campos
 codigo: Código identificatorio del cliente. Ejemplo: "C12345".
 documentoIdentificatorio: CUIT o documento identificatorio del cliente. Ejemplo: "20304050607".
@@ -146,7 +146,7 @@ clase: Clase del cliente, como "A", "B", "C", etc. Ejemplo: "A".
 tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO". Ejemplo: "DISTRIBUIDOR".
 tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
 generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
-
+```
 
 ### Ejemplo de JSON para la API REST basado en `ArticuloDto`
 

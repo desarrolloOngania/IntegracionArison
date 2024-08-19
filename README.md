@@ -136,7 +136,7 @@ La selección del ambiente se realiza de la siguiente manera:
   "tiempoDescarga": 15,
   "generarPasswordEntrega": true
 }
-
+```
 Descripción de los campos
 codigo: Código identificatorio del cliente. Ejemplo: "C12345".
 documentoIdentificatorio: CUIT o documento identificatorio del cliente. Ejemplo: "20304050607".
@@ -147,7 +147,9 @@ tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO".
 tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
 generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
 
+
 ### Ejemplo de JSON para la API REST basado en `ArticuloDto`
+
 
 ```json
 {
@@ -183,4 +185,4 @@ idMedidaPeso: Identificador de la unidad de medida del peso del artículo. Ejemp
 peso: Peso del artículo en la unidad correspondiente. Ejemplo: 2.5.
 idMedidaVolumen: Identificador de la unidad de medida del volumen del artículo. Ejemplo: 2.
 volumen: Volumen del artículo en la unidad correspondiente. Ejemplo: 1.75.
-
+```

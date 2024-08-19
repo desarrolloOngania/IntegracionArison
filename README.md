@@ -285,4 +285,69 @@ precio: Precio unitario del artículo (puede ser nulo).
 monCte: Moneda corriente utilizada en el pedido.
 depoProveedor: Código del depósito que abastece la demanda.
 ```
+### Ejemplo de JSON para la API REST basado en `DepositoDto`
+```
+{
+  "CodigoDeposito": "DPT001",
+  "Nombre": "Depósito Principal",
+  "UsaIDPallet": 1,
+  "CodigoDepositoTDI": 123,
+  "RecuentaInventario": 1,
+  "PidePalletOrigenEnPuk": 0,
+  "PidePalletDestinoEnPuk": 1,
+  "UsaZonas": 1,
+  "LecturaEnPicking": "Sí",
+  "LecturaEnAlmacenaje": "No",
+  "PickingMultiPallet": 0,
+  "AlmacenajeMultiPallet": 1,
+  "VerificaStockEnEstiba": 1,
+  "FractionsEnable": 0,
+  "IdUbicacionNoHallados": 999,
+  "IdUbicacionPivot": 100,
+  "PermiteTransferenciaAUbicacion": 1,
+  "EsDepositoDetallado": 1,
+  "IdUbicacionCuarentena": 200,
+  "CodigoCentroDistribucion": "CD001",
+  "DiasAlVencimiento": 30,
+  "DepositoDeTerceros": 0,
+  "DimensionCambioSentidoRecoleccion": 10,
+  "UsaStockUbicacion": 1,
+  "DescDim1": "Altura",
+  "DescDim2": "Ancho",
+  "DescDim3": "Largo",
+  "DescDim4": "Peso",
+  "DescDim5": "Volumen"
+}
 
+Descripción de los Campos
+CodigoDeposito: Código del depósito (Requerido)
+Nombre: Nombre del depósito (Requerido)
+UsaIDPallet: Indica si se utiliza ID de pallet (0: No, 1: Sí)
+CodigoDepositoTDI: Código del depósito para TDI (Toma de inventario)
+RecuentaInventario: Indica si se realiza recuento de inventario (0: No, 1: Sí)
+PidePalletOrigenEnPuk: Indica si se pide pallet de origen en PUK (0: No, 1: Sí)
+PidePalletDestinoEnPuk: Indica si se pide pallet de destino en PUK (0: No, 1: Sí)
+UsaZonas: Indica si el depósito utiliza zonas (0: No, 1: Sí)
+LecturaEnPicking: Indica si se requiere lectura en picking (Sí/No)
+LecturaEnAlmacenaje: Indica si se requiere lectura en almacenaje (Sí/No)
+PickingMultiPallet: Indica si se permite picking multi-pallet (0: No, 1: Sí)
+AlmacenajeMultiPallet: Indica si se permite almacenaje multi-pallet (0: No, 1: Sí)
+VerificaStockEnEstiba: Indica si se verifica stock en estiba (0: No, 1: Sí)
+FractionsEnable: Indica si se habilita el uso de fracciones (0: No, 1: Sí)
+IdUbicacionNoHallados: ID de ubicación para productos no hallados
+IdUbicacionPivot: ID de ubicación pivote
+PermiteTransferenciaAUbicacion: Indica si se permite transferencia a ubicación (0: No, 1: Sí)
+EsDepositoDetallado: Indica si es un depósito detallado (0: No, 1: Sí)
+IdUbicacionCuarentena: ID de ubicación de cuarentena
+CodigoCentroDistribucion: Código del Centro de Distribución (CD) (Requerido)
+DiasAlVencimiento: Días al vencimiento de los productos en el depósito
+DepositoDeTerceros: Indica si el depósito pertenece a un tercero (0: No, 1: Sí)
+DimensionCambioSentidoRecoleccion: Dimensión para cambiar el sentido de recolección
+UsaStockUbicacion: Indica si se utiliza stock por ubicación (0: No, 1: Sí)
+DescDim1: Descripción de la primera dimensión
+DescDim2: Descripción de la segunda dimensión
+DescDim3: Descripción de la tercera dimensión
+DescDim4: Descripción de la cuarta dimensión
+DescDim5: Descripción de la quinta dimensión
+
+```

@@ -45,7 +45,7 @@ DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuar
 Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementacion pero mantiene el standars
 
 
-[https://urlvariable.com/[api]/[recurso]/[id]
+https://urlvariable.com/[api]/[recurso]/[id]
 recurso: Especifica el tipo de recurso sobre el que se va a realizar la operación (usuarios, productos, etc.).
 id: Identificador único del recurso (opcional, según la operación).
 Ejemplo:

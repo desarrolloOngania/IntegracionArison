@@ -42,7 +42,7 @@ DELETE: Se utiliza para eliminar un recurso. Por ejemplo, para eliminar un usuar
 <a name="url"></a>
 ### Estructura estándar de una URL en Arison
 
-Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementacion pero mantiene el standars
+Las URLs en Arison siguen un patrón estándar para identificar los recursos y las acciones a realizar sobre ellos, la URL varia en cada implementación pero mantiene el standar.
 
 
 https://urlvariable.com/[api]/[recurso]/[id]

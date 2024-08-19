@@ -71,7 +71,8 @@ Implementado Arison y contratado el modulo de integración comienzan a estar dis
 
 <a name="otras"></a>
 ### Otras integraciones
-Nuestra API flexible se integra fácilmente con cualquier sistema, independientemente del formato o método de intercambio de datos, garantizando una adaptabilidad total a diversas plataformas y tecnologías. Nuestra API admite integraciones a través de múltiples métodos, incluyendo la importación de datos desde CSV, XML, archivos de texto, archivos excel, intercambios por FTP entre muchos otros mas.
+Nuestra API flexible se integra fácilmente con cualquier sistema, independientemente del formato o método de intercambio de datos, garantizando una adaptabilidad total a diversas plataformas y tecnologías. Nuestra API admite integraciones a través de múltiples métodos, incluyendo la importación de datos desde CSV, XML, archivos de texto, archivos excel, intercambios por FTP entre muchos otros mas.  
+Para obtener más información, no dude en consultar con Arison.
 
 <a name="documentacion"></a>
 ## Documentación detallada de la API

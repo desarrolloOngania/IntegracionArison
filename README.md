@@ -14,7 +14,7 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Descripción de los ambientes](#ambientesdescripcion)
   - [Gestión de las configuraciones](#gestion)
   - [Selección del ambiente](#ambientesseleccion)
-- [Datos JSON](#datos) 
+- [Datos JSON](#datosjson) 
 
   
   
@@ -119,7 +119,7 @@ La selección del ambiente se realiza de la siguiente manera:
 | Desarrollo | http://api.arison.ongania.com:4508/dev | Pruebas y desarrollo | Configuraciones flexibles, datos de prueba |
 | Producción | https://api.arison.ongania.com | Uso en producción | Configuraciones estables, datos reales |
 
-<a name="datos"></a>
+<a name="datosjson"></a>
 
 ## Datos JSON
 
@@ -351,3 +351,256 @@ DescDim4: Descripción de la cuarta dimensión
 DescDim5: Descripción de la quinta dimensión
 
 ```
+Ejemplo en JSON
+### Ejemplo de JSON para la API REST basado en `DepositoDto`
+```
+public class VendedorDto
+{
+    /// <summary>
+    /// Código del vendedor
+    /// </summary>
+    [Required]
+    public string Codigo { get; set; }
+
+    /// <summary>
+    /// Nombre del vendedor
+    /// </summary>
+    [Required]
+    public string Nombre { get; set; }
+
+    /// <summary>
+    /// Porcentaje de comisión
+    /// </summary>
+    public decimal PorcentageComision { get; set; }
+
+    /// <summary>
+    /// Código de la tienda
+    /// </summary>
+    public string CodigoShop { get; set; }
+
+    /// <summary>
+    /// Indica si el vendedor está inhabilitado
+    /// </summary>
+    public bool Inhabilita { get; set; }
+
+    /// <summary>
+    /// Tipo de documento (DNI, pasaporte, etc.)
+    /// </summary>
+    public string TipoDoc { get; set; }
+
+    /// <summary>
+    /// Número de documento
+    /// </summary>
+    public string NumeroDoc { get; set; }
+
+    /// <summary>
+    /// Domicilio del vendedor
+    /// </summary>
+    public string Domicilio { get; set; }
+
+    /// <summary>
+    /// Código postal
+    /// </summary>
+    public string CodPostal { get; set; }
+
+    /// <summary>
+    /// Localidad
+    /// </summary>
+    public string Localidad { get; set; }
+
+    /// <summary>
+    /// Código de provincia
+    /// </summary>
+    public string CodProvin { get; set; }
+
+    /// <summary>
+    /// Teléfono
+    /// </summary>
+    public string Telefono { get; set; }
+
+    /// <summary>
+    /// Correo electrónico
+    /// </summary>
+    public string EMail { get; set; }
+
+    /// <summary>
+    /// Código GVA23 (posiblemente un código de referencia interno)
+    /// </summary>
+    public string CodGVA23 { get; set; }
+
+    /// <summary>
+    /// Observaciones adicionales
+    /// </summary>
+    public string Observaciones { get; set; }
+
+    /// <summary>
+    /// Código GVA18 (posiblemente otro código de referencia interno)
+    /// </summary>
+    public string CodGVA18 { get; set; }
+
+    /// <summary>
+    /// Versión de la fila (para control de cambios)
+    /// </summary>
+    public int RowVersion { get; set; }
+
+    /// <summary>
+    /// Campos adicionales (para datos no especificados en esta clase)
+    /// </summary>
+    public string CamposAdicionales { get; set; }
+
+    /// <summary>
+    /// ID de GVA23 (posiblemente un identificador único)
+    /// </summary>
+    public int IdGVA23 { get; set; }
+
+    /// <summary>
+    /// ID de GVA18 (posiblemente un identificador único)
+    /// </summary>
+    public int IdGVA18 { get; set; }
+
+    /// <summary>
+    /// ID del tipo de documento en el sistema GVA
+    /// </summary>
+    public int IdTipoDocumentoGv { get; set; }
+}
+
+Descripción de los Campos
+Codigo: Código del vendedor (Requerido)
+Nombre: Nombre del vendedor (Requerido)
+PorcentageComision: Porcentaje de comisión que recibe el vendedor.
+CodigoShop: Código de la tienda a la que está asociado el vendedor.
+Inhabilita: Indica si el vendedor está inhabilitado (true: Sí, false: No).
+TipoDoc: Tipo de documento del vendedor (DNI, pasaporte, etc.).
+NumeroDoc: Número de documento del vendedor.
+Domicilio: Domicilio del vendedor.
+CodPostal: Código postal del domicilio del vendedor.
+Localidad: Localidad donde reside el vendedor.
+CodProvin: Código de provincia donde reside el vendedor.
+Telefono: Número de teléfono del vendedor.
+EMail: Correo electrónico del vendedor.
+CodGVA23: Código GVA23 (posiblemente un código de referencia interno).
+Observaciones: Observaciones adicionales sobre el vendedor.
+CodGVA18: Código GVA18 (posiblemente otro código de referencia interno).
+RowVersion: Versión de la fila (para control de cambios).
+CamposAdicionales: Campos adicionales para datos no especificados en esta clase.
+IdGVA23: ID de GVA23 (posiblemente un identificador único).
+IdGVA18: ID de GVA18 (posiblemente un identificador único).
+IdTipoDocumentoGv: ID del tipo de documento en el sistema GVA.
+```
+### Ejemplo de JSON para la API REST basado en `TransporteDto`
+```
+public class TransporteDto
+{
+    /// <summary>
+    /// Código único que identifica al transporte.
+    /// </summary>
+    [Required]
+    public int CodigoTransporte { get; set; }
+
+    /// <summary>
+    /// CUIT del transporte.
+    /// </summary>
+    public string CUITTransporte { get; set; }
+
+    /// <summary>
+    /// Dirección del transporte.
+    /// </summary>
+    public string DomicilioTransporte { get; set; }
+
+    /// <summary>
+    /// Nombre del transporte.
+    /// </summary>
+    public string NombreTransporte { get; set; }
+
+    /// <summary>
+    /// Porcentaje de recargo aplicado.
+    /// </summary>
+    public decimal PorcentajeRecargo { get; set; }
+
+    /// <summary>
+    /// Código postal del transporte.
+    /// </summary>
+    public string CodigoPostal { get; set; }
+
+    /// <summary>
+    /// Localidad donde está ubicado el transporte.
+    /// </summary>
+    public string Localidad { get; set; }
+
+    /// <summary>
+    /// Código de la provincia donde está ubicado el transporte.
+    /// </summary>
+    public string CodigoProvincia { get; set; }
+
+    /// <summary>
+    /// Número de teléfono del transporte.
+    /// </summary>
+    public string Telefono { get; set; }
+
+    /// <summary>
+    /// Correo electrónico del transporte.
+    /// </summary>
+    public string Email { get; set; }
+
+    /// <summary>
+    /// Página web del transporte.
+    /// </summary>
+    public string Web { get; set; }
+
+    /// <summary>
+    /// Código GVA24, posiblemente un código de referencia interno.
+    /// </summary>
+    public string CodigoGVA24 { get; set; }
+
+    /// <summary>
+    /// Observaciones adicionales sobre el transporte.
+    /// </summary>
+    public string Observaciones { get; set; }
+
+    /// <summary>
+    /// Código GVA18, posiblemente otro código de referencia interno.
+    /// </summary>
+    public string CodigoGVA18 { get; set; }
+
+    /// <summary>
+    /// Identificador único de GVA24.
+    /// </summary>
+    public int IdGVA24 { get; set; }
+
+    /// <summary>
+    /// Versión de la fila para control de cambios.
+    /// </summary>
+    public string RowVersion { get; set; }
+
+    /// <summary>
+    /// Información adicional en formato XML o similar.
+    /// </summary>
+    public string CamposAdicionales { get; set; }
+
+    /// <summary>
+    /// Identificador único de GVA18.
+    /// </summary>
+    public string IdGVA18 { get; set; }
+}
+
+Descripción de los Campos 
+CodigoTransporte: Código único que identifica al transporte.
+CUITTransporte: CUIT del transporte.
+DomicilioTransporte: Dirección del transporte.
+NombreTransporte: Nombre del transporte.
+PorcentajeRecargo: Porcentaje de recargo aplicado.
+CodigoPostal: Código postal del transporte.
+Localidad: Localidad donde está ubicado el transporte.
+CodigoProvincia: Código de la provincia donde está ubicado el transporte.
+Telefono: Número de teléfono del transporte.
+Email: Correo electrónico del transporte.
+Web: Página web del transporte.
+CodigoGVA24: Código GVA24, posiblemente un código de referencia interno.
+Observaciones: Observaciones adicionales sobre el transporte.
+CodigoGVA18: Código GVA18, posiblemente otro código de referencia interno.
+IdGVA24: Identificador único de GVA24.
+RowVersion: Versión de la fila para control de cambios.
+CamposAdicionales: Información adicional en formato XML o similar.
+IdGVA18: Identificador único de GVA18.
+
+``` 

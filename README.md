@@ -14,6 +14,8 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Descripción de los ambientes](#ambientesdescripcion)
   - [Gestión de las configuraciones](#gestion)
   - [Selección del ambiente](#ambientesseleccion)
+- [Datos JSON](#datos) 
+
   
   
 
@@ -116,4 +118,32 @@ La selección del ambiente se realiza de la siguiente manera:
 |---|---|---|---|
 | Desarrollo | http://api.arison.ongania.com:4508/dev | Pruebas y desarrollo | Configuraciones flexibles, datos de prueba |
 | Producción | https://api.arison.ongania.com | Uso en producción | Configuraciones estables, datos reales |
+
+<a name="datos"></a>
+
+## Datos JSON
+
+### Ejemplo de JSON para la API REST basado en ClienteDto
+
+```json
+{
+  "codigo": "C12345",
+  "documentoIdentificatorio": "20304050607",
+  "nombre": "Acme Corporation S.A.",
+  "nombreComercial": "Acme",
+  "clase": "A",
+  "tipo": "DISTRIBUIDOR",
+  "tiempoDescarga": 15,
+  "generarPasswordEntrega": true
+}
+
+Descripción de los campos
+codigo: Código identificatorio del cliente. Ejemplo: "C12345".
+documentoIdentificatorio: CUIT o documento identificatorio del cliente. Ejemplo: "20304050607".
+nombre: Razón social del cliente. Ejemplo: "Acme Corporation S.A.".
+nombreComercial: Nombre comercial del cliente. Ejemplo: "Acme".
+clase: Clase del cliente, como "A", "B", "C", etc. Ejemplo: "A".
+tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO". Ejemplo: "DISTRIBUIDOR".
+tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
+generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
 

@@ -147,3 +147,40 @@ tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO".
 tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
 generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
 
+### Ejemplo de JSON para la API REST basado en `ArticuloDto`
+
+```json
+{
+  "codigo": "A12345",
+  "codigoBarra": "1234567890123",
+  "descripcion": "Producto Ejemplo",
+  "descripcionAdicional": "Versión mejorada del Producto Ejemplo",
+  "sinonimo": "ProductoX",
+  "equivalencia": 1.5,
+  "permiteSobreVenta": true,
+  "diasPreparacion": 3,
+  "diasAlVencimiento": 180,
+  "codigoDepositoProveedor": "D001",
+  "codigoZona": "Z001",
+  "idMedidaPeso": 1,
+  "peso": 2.5,
+  "idMedidaVolumen": 2,
+  "volumen": 1.75
+}
+Descripción de los campos
+codigo: Código del artículo. Ejemplo: "A12345".
+codigoBarra: Código de barras del artículo. Ejemplo: "1234567890123".
+descripcion: Descripción principal del artículo. Ejemplo: "Producto Ejemplo".
+descripcionAdicional: Descripción secundaria del artículo. Ejemplo: "Versión mejorada del Producto Ejemplo".
+sinonimo: Sinónimo para identificar el artículo. Ejemplo: "ProductoX".
+equivalencia: Equivalencia del artículo en unidades. Ejemplo: 1.5.
+permiteSobreVenta: Indica si se permite el stock negativo del artículo. Ejemplo: true.
+diasPreparacion: Número de días de preparación del artículo. Ejemplo: 3.
+diasAlVencimiento: Días restantes hasta el vencimiento del artículo. Ejemplo: 180.
+codigoDepositoProveedor: Código del depósito que provee al artículo por defecto. Ejemplo: "D001".
+codigoZona: Código de la zona donde se almacena el artículo. Ejemplo: "Z001".
+idMedidaPeso: Identificador de la unidad de medida del peso del artículo. Ejemplo: 1.
+peso: Peso del artículo en la unidad correspondiente. Ejemplo: 2.5.
+idMedidaVolumen: Identificador de la unidad de medida del volumen del artículo. Ejemplo: 2.
+volumen: Volumen del artículo en la unidad correspondiente. Ejemplo: 1.75.
+

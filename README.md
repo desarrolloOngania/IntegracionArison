@@ -129,7 +129,7 @@ La selección del ambiente se realiza de la siguiente manera:
 
 ## Datos JSON
 
-<a name="generalidades"></a>
+<a name="ClienteDTO"></a>
 
 ### Ejemplo de JSON para la API REST basado en ClienteDto
 

@@ -140,7 +140,7 @@ La selección del ambiente se realiza de la siguiente manera:
 
 ### Ejemplo de JSON para la API REST basado en `ClienteDto`
 
-```json
+```
 {
   "codigo": "C12345",
   "documentoIdentificatorio": "20304050607",

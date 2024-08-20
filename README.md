@@ -527,99 +527,26 @@ IdTipoDocumentoGv: ID del tipo de documento en el sistema GVA.
 
 ### Ejemplo de JSON para la API REST basado en `TransporteDto`
 ```json
-public class TransporteDto
 {
-    /// <summary>
-    /// Código único que identifica al transporte.
-    /// </summary>
-    [Required]
-    public int CodigoTransporte { get; set; }
-
-    /// <summary>
-    /// CUIT del transporte.
-    /// </summary>
-    public string CUITTransporte { get; set; }
-
-    /// <summary>
-    /// Dirección del transporte.
-    /// </summary>
-    public string DomicilioTransporte { get; set; }
-
-    /// <summary>
-    /// Nombre del transporte.
-    /// </summary>
-    public string NombreTransporte { get; set; }
-
-    /// <summary>
-    /// Porcentaje de recargo aplicado.
-    /// </summary>
-    public decimal PorcentajeRecargo { get; set; }
-
-    /// <summary>
-    /// Código postal del transporte.
-    /// </summary>
-    public string CodigoPostal { get; set; }
-
-    /// <summary>
-    /// Localidad donde está ubicado el transporte.
-    /// </summary>
-    public string Localidad { get; set; }
-
-    /// <summary>
-    /// Código de la provincia donde está ubicado el transporte.
-    /// </summary>
-    public string CodigoProvincia { get; set; }
-
-    /// <summary>
-    /// Número de teléfono del transporte.
-    /// </summary>
-    public string Telefono { get; set; }
-
-    /// <summary>
-    /// Correo electrónico del transporte.
-    /// </summary>
-    public string Email { get; set; }
-
-    /// <summary>
-    /// Página web del transporte.
-    /// </summary>
-    public string Web { get; set; }
-
-    /// <summary>
-    /// Código GVA24, posiblemente un código de referencia interno.
-    /// </summary>
-    public string CodigoGVA24 { get; set; }
-
-    /// <summary>
-    /// Observaciones adicionales sobre el transporte.
-    /// </summary>
-    public string Observaciones { get; set; }
-
-    /// <summary>
-    /// Código GVA18, posiblemente otro código de referencia interno.
-    /// </summary>
-    public string CodigoGVA18 { get; set; }
-
-    /// <summary>
-    /// Identificador único de GVA24.
-    /// </summary>
-    public int IdGVA24 { get; set; }
-
-    /// <summary>
-    /// Versión de la fila para control de cambios.
-    /// </summary>
-    public string RowVersion { get; set; }
-
-    /// <summary>
-    /// Información adicional en formato XML o similar.
-    /// </summary>
-    public string CamposAdicionales { get; set; }
-
-    /// <summary>
-    /// Identificador único de GVA18.
-    /// </summary>
-    public string IdGVA18 { get; set; }
-}
+    "CodigoTransporte": 85,
+    "CUITTransporte": "30-70761670-5",
+    "DomicilioTransporte": "Colonia 371 Pque.Patricios",
+    "NombreTransporte": "Guillán Hugo y Hnos. S.H.",
+    "PorcentajeRecargo": 0.0,
+    "CodigoPostal": null,
+    "Localidad": null,
+    "CodigoProvincia": null,
+    "Telefono": null,
+    "Email": null,
+    "Web": null,
+    "CodigoGVA24": "85",
+    "Observaciones": null,
+    "CodigoGVA18": null,
+    "IdGVA24": 3,
+    "RowVersion": "0x000000000056F312",
+    "CamposAdicionales": "<CAMPOS_ADICIONALES />",
+    "IdGVA18": null
+  }
 
 Descripción de los Campos 
 CodigoTransporte: Código único que identifica al transporte.

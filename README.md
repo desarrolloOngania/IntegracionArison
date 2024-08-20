@@ -720,3 +720,281 @@ TipoAutorizacion: Tipo de autorización.
 IdGVA43TalonarioCAEA: Identificador del talonario CAEA.
 UsaDestinoImpresionEnPdf: Indica si se utiliza la impresión de destino en PDF.
 ```
+### Ejemplo de JSON para la API REST basado en `ProveedorDto`
+```
+{
+  "CPostal": "1000",
+  "CitiOpera": "Operación Principal",
+  "CitiTipo": "Tipo A",
+  "ClasSiap": "Categoría 1",
+  "Clausula": "Cláusula especial para proveedores",
+  "CodProvee": "PROV001",
+  "CondCompr": "Contado",
+  "CondIVA": "Responsable Inscripto",
+  "Contacto": "Juan Pérez",
+  "ContFiscal": "SI",
+  "Domicilio": "Avenida Siempreviva 123, Piso 5, Oficina A",
+  "Email": "juan.pere@empresa.com",
+  "FechaAlta": "2023-04-15T10:30:00Z",
+  "FechaAnt": "2022-12-31T23:59:59Z",
+  "FechaInha": null,
+  "FechaVto": "2024-12-31T23:59:59Z",
+  "IdExterno": "EXT-12345",
+  "IdInterno": "INT-67890",
+  "IIL": 0.21,
+  "IIS": 0.105,
+  "IncIILis": false,
+  "IncIVALi": false,
+  "IVAL": 0.21,
+  "IVAS": 0.105,
+  "LetraHabi": "A",
+  "LimCredit": 100000,
+  "Localidad": "Buenos Aires",
+  "MonCteHa": "ARS",
+  "NCuit": "20-34567890-9",
+  "NIngBrut": "12345678",
+  "NIva": "98765432",
+  "NomProvee": "Empresa Proveedora S.A.",
+  "Observaciones": "Proveedor clave para el proyecto X",
+  "Observac2": "Condiciones especiales de pago",
+  "Orden": 1,
+  "Provincia": "Buenos Aires",
+  "RNI": false,
+  "SaldoAnt": 1000,
+  "SaldoCC": 500,
+  "SaldoDoc": 200,
+  "SaldoCUnidades": 10,
+  "TForm": "Factura A",
+  "Telefono1": "11-4444-5555",
+  "Telefono2": "11-6666-7777",
+  "Tipo": "Proveedor General",
+  "TipoDoc": "CUIT",
+  "FechaModi": "2023-05-10T15:00:00Z",
+  "ExpSaldo": 1500,
+  "Exporta": true,
+  "NomFant": "Proveedor SA",
+  "CodDeposi": "DEP001",
+  "CodSector": "SECTOR1",
+  "CodGasto": "GASTO1",
+  "CodConiva": "CONIVA1",
+  "CodCoexe": "COEXE1",
+  "ListaXml": "LISTA.XML",
+  "TalonarioXml": "TALONARIO.XML",
+  "ArtFletes": "FLETE01",
+  "ArtSeguro": "SEGURO01",
+  "CodComFon": "COMFON01",
+  "CodCtaDeb": "CTA_DEBITO",
+  "CodCtaFon": "CTA_FONDO",
+  "CodOperac": "OP001",
+  "ProvElect": true,
+  "SucurOri": "SUCURSAL01",
+  "InfIVA": "Informacion adicional sobre IVA",
+  "CFondoPM": "FONDO_PM",
+  "DiasChPM": 30,
+  "CFunicaPM": "UNICO_PM",
+  "PagoChe": true,
+  "EmailDe": "destino@ejemplo.com",
+  "HabilPM": true,
+  "Web": "https://www.proveedorsa.com",
+  "CodRubro": "RUBRO01",
+  "CtaPro": "CTA_PROVEEDOR",
+  "CtoPro": "CONTRATO_PROVEEDOR",
+  "CalcuRet": true,
+  "NumAutoma": "AUT001",
+  "TasienDeb": 1.2,
+  "TasienCre": 0.8,
+  "TasienFac": 1.1,
+  "CodCPA01": "CPA01_COD",
+  "Cbu": "0111222233334444555566",
+  "OCObligatoria": true,
+  "EmailOp": "operaciones@empresa.com",
+  "EmailOC": "ordenescompra@empresa.com",
+  "Rg3572EmpresaVinculadaProveedor": "SI",
+  "Rg3572TipoOperacionHabitualProveedor": "VENTA",
+  "Rg3685TipoOperacionCompras": "COMPRA",
+  "Rg3685ComprobanteCompras": "FACTURA",
+  "Rg3685GeneraInformacion": true,
+  "EditaComprobanteReferenciaFacturaRemito": true,
+  "DefectoComprobanteReferenciaFacturaRemito": "FACTURA",
+  "EditaComprobanteReferenciaFactura": true,
+  "DefectoComprobanteReferenciaFactura": "FACTURA",
+  "EditaComprobanteReferenciaRemito": true,
+  "DefectoComprobanteReferenciaRemito": "REMITO",
+  "IngresaFacturaSinRemitoAsociado": true,
+  "IngresaFletePorRenglon": true,
+  "MonedaLimiteCreditoCte": "USD",
+  "SaldoCCUnidades": 5,
+  "SaldoAnteriorUnidades": 12,
+  "Observaciones": "Observaciones adicionales",
+  "DomicilioComercial": "Avenida Principal 123",
+  "TelefonoMovil": "15-1111-2222",
+  "PorcDesc": 5,
+  "IdCPA01": "CPA01_ID",
+  "TextoIB1": "Texto IB1",
+  "TextoIB2": "Texto IB2",
+  "TextoIB3": "Texto IB3",
+  "TextoIB4": "Texto IB4",
+  "Texto": "Texto adicional",
+  "CBU2": "0111222233334444555567",
+  "CBU3": "0111222233334444555568",
+  "DescripcionCBU": "Cuenta corriente",
+  "DescripcionCBU2": "Cuenta sueldo",
+  "DescripcionCBU3": "Cuenta ahorro",
+  "ConversorClausulaDiferenciaEstados": true,
+  "RowVersion": "AQIDBA==",
+  "CamposAdicionales": "{\"ContactoAlternativo\":\"María Gómez\",\"TelefonoMovil\":\"155555555\"}",
+  "IdTipoDocumentoGV": "DNI",
+  "IdCPA57": "CPA5701",
+  "IdGVA151": "GVA15101",
+  "IdCategoriaIVACondIVA": "CAT_IVA_1",
+  "IdOperacionAFIPRG3685TipoOperacionCompras": "OP_COMPRA",
+  "IdTipoComprobanteAFIPRG3685ComprobanteCompras": "FACT_A",
+  "IdRG3572TipoOperacionHabitualProveedor": "VENTA_MAYORISTA",
+  "IdIVAClasificacionSIAPClasSIAP": "CLAS_SIAP_1",
+  "IdSBA01CFondoPM": "FONDO_PM_1",
+  "IdSBA01CFunicaPM": "UNICO_PM_1",
+  "IdCondicionCompra": "COND_COMPRA_1",
+  "IdSucurOri": "SUCURSAL_ORIGEN",
+  "CMVigenciaCoeficiente": 1.1,
+  "IdSucursalDestino": "SUCURSAL_DESTINO",
+  "Habilitado": true
+}
+
+Descripción de los Campos 
+CPostal: Código postal del proveedor.
+CitiOpera: Operación de Citi.
+CitiTipo: Tipo de Citi.
+ClasSiap: Clasificación SIAP.
+Clausula: Cláusula específica.
+CodProvee: Código del proveedor.
+CondCompr: Condición de compra.
+CondIVA: Condición ante el IVA.
+Contacto: Persona de contacto del proveedor.
+ContFiscal: Control fiscal del proveedor.
+Domicilio: Dirección física del proveedor.
+Email: Correo electrónico del proveedor.
+FechaAlta: Fecha de alta del proveedor.
+FechaAnt: Fecha anterior registrada.
+FechaInha: Fecha de inhabilitación del proveedor.
+FechaVto: Fecha de vencimiento.
+IdExterno: Identificador externo del proveedor.
+IdInterno: Identificador interno del proveedor.
+IIL: Impuesto Interno Libre.
+IIS: Impuesto Interno Sobre.
+IncIILis: Inclusión en lista de Impuesto Interno Libre.
+IncIVALi: Inclusión en lista de IVA Libre.
+IVAL: IVA Libre.
+IVAS: IVA Sobre.
+LetraHabi: Letra habilitada para el proveedor.
+LimCredit: Límite de crédito asignado al proveedor.
+Localidad: Localidad del proveedor.
+MonCteHa: Moneda de cuenta habilitada.
+NCuit: Número de CUIT del proveedor.
+NIngBrut: Número de ingresos brutos.
+NIva: Número de IVA.
+NomProvee: Nombre del proveedor.
+Observacio: Observaciones adicionales.
+Observac2: Segunda observación adicional.
+Orden: Orden del proveedor.
+Provincia: Provincia donde se ubica el proveedor.
+RNI: Responsable no inscripto.
+SaldoAnt: Saldo anterior.
+SaldoCC: Saldo en cuenta corriente.
+SaldoDoc: Saldo del documento.
+SaldoCUnidades: Saldo en unidades.
+TForm: Tipo de formulario utilizado.
+Telefono1: Primer número de teléfono.
+Telefono2: Segundo número de teléfono.
+Tipo: Tipo de proveedor.
+TipoDoc: Tipo de documento del proveedor.
+FechaModi: Fecha de la última modificación.
+ExpSaldo: Saldo exportado.
+Exporta: Indica si el proveedor exporta.
+NomFant: Nombre de fantasía del proveedor.
+CodDeposi: Código del depósito asociado.
+CodSector: Código del sector del proveedor.
+CodGasto: Código de gasto asociado al proveedor.
+CodConiva: Código de condición frente al IVA.
+CodCoexe: Código de condición de exención.
+ListaXml: Lista XML asociada al proveedor.
+TalonarioXml: Talonario XML asociado.
+ArtFletes: Artículo de fletes asociado.
+ArtSeguro: Artículo de seguro asociado.
+CodComFon: Código de comisión de fondo.
+CodCtaDeb: Código de cuenta de débito.
+CodCtaFon: Código de cuenta de fondo.
+CodOperac: Código de operación del proveedor.
+ProvElect: Indica si es un proveedor electrónico.
+SucurOri: Sucursal de origen.
+InfIVA: Información del IVA.
+CFondoPM: Código de fondo para PM.
+DiasChPM: Días de cheque para PM.
+CFunicaPM: Código único para PM.
+PagoChe: Pago con cheque.
+EmailDe: Email de destino.
+HabilPM: Indica si está habilitado para PM.
+Web: Sitio web del proveedor.
+CodRubro: Código de rubro del proveedor.
+CtaPro: Cuenta del proveedor.
+CtoPro: Contrato del proveedor.
+CalcuRet: Indica si se calcula retención.
+NumAutoma: Número automático.
+TasienDeb: Tasa de asiento de débito.
+TasienCre: Tasa de asiento de crédito.
+TasienFac: Tasa de asiento de factura.
+CodCPA01: Código CPA01.
+Cbu: Clave Bancaria Uniforme del proveedor.
+OCObligatoria: Indica si la orden de compra es obligatoria.
+EmailOp: Email de operación.
+EmailOC: Email para orden de compra.
+Rg3572EmpresaVinculadaProveedor: Empresa vinculada al proveedor según RG 3572.
+Rg3572TipoOperacionHabitualProveedor: Tipo de operación habitual del proveedor según RG 3572.
+Rg3685TipoOperacionCompras: Tipo de operación de compras según RG 3685.
+Rg3685ComprobanteCompras: Comprobante de compras según RG 3685.
+Rg3685GeneraInformacion: Indica si se genera información según RG 3685.
+EditaComprobanteReferenciaFacturaRemito: Indica si se puede editar el comprobante de referencia factura/remito.
+DefectoComprobanteReferenciaFacturaRemito: Indica el defecto en el comprobante de referencia factura/remito.
+EditaComprobanteReferenciaFactura: Indica si se puede editar el comprobante de referencia factura.
+DefectoComprobanteReferenciaFactura: Indica el defecto en el comprobante de referencia factura.
+EditaComprobanteReferenciaRemito: Indica si se puede editar el comprobante de referencia remito.
+DefectoComprobanteReferenciaRemito: Indica el defecto en el comprobante de referencia remito.
+IngresaFacturaSinRemitoAsociado: Indica si se puede ingresar una factura sin remito asociado.
+IngresaFletePorRenglon: Indica si se ingresa flete por renglón.
+MonedaLimiteCreditoCte: Moneda límite de crédito en cuenta corriente.
+SaldoCCUnidades: Saldo en unidades en cuenta corriente.
+SaldoAnteriorUnidades: Saldo anterior en unidades.
+Observaciones: Observaciones adicionales.
+DomicilioComercial: Domicilio comercial del proveedor.
+TelefonoMovil: Número de teléfono móvil.
+PorcDesc: Porcentaje de descuento.
+IdCPA01: Identificador CPA01.
+TextoIB1: Texto adicional de Ingresos Brutos 1.
+TextoIB2: Texto adicional de Ingresos Brutos 2.
+TextoIB3: Texto adicional de Ingresos Brutos 3.
+TextoIB4: Texto adicional de Ingresos Brutos 4.
+Texto: Texto adicional.
+Cbu2: Segunda Clave Bancaria Uniforme del proveedor.
+Cbu3: Tercera Clave Bancaria Uniforme del proveedor.
+DescripcionCbu: Descripción del CBU.
+DescripcionCbu2: Descripción del CBU 2.
+DescripcionCbu3: Descripción del CBU 3.
+ConversorClausulaDiferenciaEstados: Conversor de cláusula para diferencia de estados.
+RowVersion: Versión de la fila.
+CamposAdicionales: Campos adicionales del proveedor.
+IdTipoDocumentoGV: Identificador del tipo de documento GV.
+IdCPA57: Identificador CPA57.
+IdGVA151: Identificador de la tabla GVA151.
+IdCategoriaIVACondIVA: Identificador de la categoría de IVA y condición de IVA.
+IdOperacionAFIPRG3685TipoOperacionCompras: Identificador de operación AFIP RG3685.
+IdTipoComprobanteAFIPRG3685ComprobanteCompras: Identificador de tipo de comprobante AFIP RG3685.
+IdRG3572TipoOperacionHabitualProveedor: Identificador de operación habitual RG3572.
+IdIVAClasificacionSIAPClasSIAP: Identificador de clasificación SIAP.
+IdSBA01CFondoPM: Identificador de fondo PM.
+IdSBA01CFunicaPM: Identificador único PM.
+IdCondicionCompra: Identificador de condición de compra.
+IdSucurOri: Identificador de la sucursal de origen.
+CMVigenciaCoeficiente: Coeficiente de vigencia.
+IdSucursalDestino: Identificador de la sucursal de destino.
+Habilitado: Indica si el proveedor está habilitado.
+```
+

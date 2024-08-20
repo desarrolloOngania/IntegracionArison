@@ -1,5 +1,5 @@
 <a name="inicio"></a>
-Arison WMS|TMS - API REST INTEGRACION
+Arison WMS | TMS - API REST Integración
 =======
 
 - [Generalidades](#generalidades)

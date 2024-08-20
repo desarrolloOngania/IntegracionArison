@@ -356,8 +356,8 @@ DescDim4: Descripción de la cuarta dimensión
 DescDim5: Descripción de la quinta dimensión
 
 ```
-Ejemplo en JSON
-### Ejemplo de JSON para la API REST basado en `DepositoDto`
+
+### Ejemplo de JSON para la API REST basado en `VendedorDto`
 ```
 public class VendedorDto
 {
@@ -608,4 +608,115 @@ RowVersion: Versión de la fila para control de cambios.
 CamposAdicionales: Información adicional en formato XML o similar.
 IdGVA18: Identificador único de GVA18.
 
-``` 
+```
+### Ejemplo de JSON para la API REST basado en `VendedorDto`
+```
+{
+    "IdGVA43": 106,
+    "CAI": "",
+    "CFCopias": 0,
+    "Comprobante": "PED",
+    "ControlFiscal": 0,
+    "Descripcion": "PEDIDO COSACO",
+    "Destino": "USB002",
+    "Duplica": 0,
+    "EditaNumero": 0,
+    "FechaVencimiento": "2222-01-01T00:00:00",
+    "ModeloControlFiscal": "",
+    "NumeroDesde": 1,
+    "NumeroHasta": 999999,
+    "ProximoNumero": "7407437B53790666",
+    "Renglones": 100,
+    "Sucursal": 1,
+    "TipoFormulario": 1,
+    "Talonario": "",
+    "TipoComprobante": "PED",
+    "Exclusivo": 0,
+    "CodigoCaja": "",
+    "Manual": 0,
+    "NumeroAutorizacion": "",
+    "Llave1": "",
+    "Llave2": "",
+    "FechaAviso": "1800-01-01T00:00:00",
+    "ValorFecha": 0,
+    "DocumentoElectronico": 0,
+    "MetodoControlDe": "L",
+    "ImagenTipo": "I",
+    "DestinoDeImpresion": "1",
+    "ImportacionDeDatos": 0,
+    "EnviaPorCorreo": 0,
+    "CodigoDocumentoElectronico": 0,
+    "SucursalDestino": 0,
+    "UsaSistemaImpresion": 0,
+    "RutaPdf": "S",
+    "UtilizaBonoFiscal": 0,
+    "GuardaCopiaPdf": 0,
+    "TipoTalonario": "",
+    "Observaciones": "NO_CONTROLA",
+    "NumeracionPreimpresa": 0,
+    "MetodoImpresionComprobantes": "",
+    "ConCbuInformado": 0,
+    "Recibo": 0,
+    "UsaUsb": 0,
+    "ComprobanteCredito": 0,
+    "PublicaComprobanteTangoTiendas": 0,
+    "MetodoExportacion": 0,
+    "TipoAutorizacion": "",
+    "IdGVA43TalonarioCAEA": 0,
+    "UsaDestinoImpresionEnPdf": 0
+}
+
+Descripción de los Campos 
+IdGVA43: Identificador único del talonario.
+CAI: Código de Autorización de Impresión del comprobante.
+CFCopias: Cantidad de copias del comprobante.
+Comprobante: Tipo de comprobante (e.g., FAC, CRE, REM).
+ControlFiscal: Control fiscal del comprobante.
+Descripcion: Descripción del talonario.
+Destino: Destino del talonario.
+Duplica: Indica si se duplica el talonario.
+EditaNumero: Indica si se puede editar el número del talonario.
+FechaVencimiento: Fecha de vencimiento del talonario.
+ModeloControlFiscal: Modelo del control fiscal.
+NumeroDesde: Número desde el cual empieza la numeración del talonario.
+NumeroHasta: Número hasta el cual llega la numeración del talonario.
+ProximoNumero: Próximo número en la secuencia del talonario.
+Renglones: Cantidad de renglones del talonario.
+Sucursal: Sucursal asociada al talonario.
+TipoFormulario: Tipo de formulario utilizado.
+Talonario: Tipo de talonario.
+TipoComprobante: Tipo de comprobante (e.g., A, B, C).
+Exclusivo: Indica si es exclusivo para cierto uso.
+CodigoCaja: Código de caja asociado al talonario.
+Manual: Indica si el talonario es manual.
+NumeroAutorizacion: Número de autorización del comprobante.
+Llave1: Llave primaria del registro.
+Llave2: Llave secundaria del registro.
+FechaAviso: Fecha de aviso del talonario.
+ValorFecha: Valor de la fecha.
+DocumentoElectronico: Indica si es un documento electrónico.
+MetodoControlDe: Método de control del comprobante.
+ImagenTipo: Tipo de imagen.
+DestinoDeImpresion: Destino de impresión.
+ImportacionDeDatos: Importación de datos.
+EnviaPorCorreo: Indica si se envía por correo.
+CodigoDocumentoElectronico: Código del documento electrónico.
+SucursalDestino: Sucursal destino.
+UsaSistemaImpresion: Indica si se usa un sistema de impresión.
+RutaPdf: Ruta del archivo PDF.
+UtilizaBonoFiscal: Indica si se utiliza bono fiscal.
+GuardaCopiaPdf: Indica si se guarda una copia en PDF.
+TipoTalonario: Tipo de talonario.
+Observaciones: Observaciones adicionales.
+NumeracionPreimpresa: Indica si la numeración está preimpresa.
+MetodoImpresionComprobantes: Método de impresión de comprobantes.
+ConCbuInformado: Indica si se tiene informado el CBU.
+Recibo: Indica si es un recibo.
+UsaUsb: Indica si se utiliza USB.
+ComprobanteCredito: Indica si es un comprobante de crédito.
+PublicaComprobanteTangoTiendas: Indica si se publica el comprobante en Tango Tiendas.
+MetodoExportacion: ID del método de exportación.
+TipoAutorizacion: Tipo de autorización.
+IdGVA43TalonarioCAEA: Identificador del talonario CAEA.
+UsaDestinoImpresionEnPdf: Indica si se utiliza la impresión de destino en PDF.
+```

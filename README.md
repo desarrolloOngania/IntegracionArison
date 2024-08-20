@@ -140,7 +140,7 @@ La selección del ambiente se realiza de la siguiente manera:
 
 ### Ejemplo de JSON para la API REST basado en `ClienteDto`
 
-```
+```json
 {
   "codigo": "C12345",
   "documentoIdentificatorio": "20304050607",
@@ -315,7 +315,7 @@ depoProveedor: Código del depósito que abastece la demanda.
 <a name="DepositoDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `DepositoDto`
-```
+```json
 {
   "CodigoDeposito": "DPT001",
   "Nombre": "Depósito Principal",
@@ -386,7 +386,7 @@ DescDim5: Descripción de la quinta dimensión
 <a name="VendedorDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `VendedorDto`
-```
+```json
 public class VendedorDto
 {
     /// <summary>
@@ -526,7 +526,7 @@ IdTipoDocumentoGv: ID del tipo de documento en el sistema GVA.
 <a name="TransporteDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `TransporteDto`
-```
+```json
 public class TransporteDto
 {
     /// <summary>
@@ -648,7 +648,7 @@ IdGVA18: Identificador único de GVA18.
 <a name="VentasTalonariosDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `VentasTalonariosDto`
-```
+```json
 {
     "IdGVA43": 106,
     "CAI": "",
@@ -764,7 +764,7 @@ UsaDestinoImpresionEnPdf: Indica si se utiliza la impresión de destino en PDF.
 <a name="ProveedorDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `ProveedorDto`
-```
+```json
 {
   "CPostal": "1000",
   "CitiOpera": "Operación Principal",

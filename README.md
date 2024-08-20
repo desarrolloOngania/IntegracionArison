@@ -15,7 +15,8 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Descripción de los ambientes](#ambientesdescripcion)
   - [Gestión de las configuraciones](#gestion)
   - [Selección del ambiente](#ambientesseleccion)
-- [Datos JSON](#datosjson) 
+- [Datos JSON](#datosjson)
+  - [ClienteDto](#ClienteDTO)
 
   
   
@@ -128,6 +129,8 @@ La selección del ambiente se realiza de la siguiente manera:
 
 ## Datos JSON
 
+<a name="generalidades"></a>
+
 ### Ejemplo de JSON para la API REST basado en ClienteDto
 
 ```json
@@ -152,6 +155,8 @@ tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO".
 tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
 generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
 ```
+
+[<sub>Volver</sub>](#inicio)
 
 ### Ejemplo de JSON para la API REST basado en `ArticuloDto`
 

@@ -17,6 +17,13 @@ Arison WMS|TMS - API REST INTEGRACION
   - [Selección del ambiente](#ambientesseleccion)
 - [Datos JSON](#datosjson)
   - [ClienteDto](#ClienteDTO)
+  - [ArticuloDto](#ArticuloDto)
+  - [RequerimientoDto](#RequerimientoDto)
+  - [DepositoDto](#DepositoDto)
+  - [VendedorDto](#VendedorDto)
+  - [TransporteDto](#TransporteDto)
+  - [VentasTalonariosDto](#VentasTalonariosDto)
+  - [ProveedorDto](#ProveedorDto)
 
   
   
@@ -131,7 +138,7 @@ La selección del ambiente se realiza de la siguiente manera:
 
 <a name="ClienteDTO"></a>
 
-### Ejemplo de JSON para la API REST basado en ClienteDto
+### Ejemplo de JSON para la API REST basado en `ClienteDto`
 
 ```json
 {
@@ -157,6 +164,8 @@ generarPasswordEntrega: Indicador de si se debe generar un código de entrega pa
 ```
 
 [<sub>Volver</sub>](#inicio)
+
+<a name="ArticuloDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `ArticuloDto`
 
@@ -197,7 +206,11 @@ idMedidaVolumen: Identificador de la unidad de medida del volumen del artículo.
 volumen: Volumen del artículo en la unidad correspondiente. Ejemplo: 1.75.
 ```
 
-Ejemplo de JSON basado en RequerimientoDto
+[<sub>Volver</sub>](#inicio)
+
+<a name="RequerimientoDto"></a>
+
+### Ejemplo de JSON basado en `RequerimientoDto`
 
 ```json
 {
@@ -295,6 +308,11 @@ precio: Precio unitario del artículo (puede ser nulo).
 monCte: Moneda corriente utilizada en el pedido.
 depoProveedor: Código del depósito que abastece la demanda.
 ```
+
+[<sub>Volver</sub>](#inicio)
+
+<a name="DepositoDto"></a>
+
 ### Ejemplo de JSON para la API REST basado en `DepositoDto`
 ```
 {
@@ -361,6 +379,10 @@ DescDim4: Descripción de la cuarta dimensión
 DescDim5: Descripción de la quinta dimensión
 
 ```
+
+[<sub>Volver</sub>](#inicio)
+
+<a name="VendedorDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `VendedorDto`
 ```
@@ -497,6 +519,11 @@ IdGVA23: ID de GVA23 (posiblemente un identificador único).
 IdGVA18: ID de GVA18 (posiblemente un identificador único).
 IdTipoDocumentoGv: ID del tipo de documento en el sistema GVA.
 ```
+
+[<sub>Volver</sub>](#inicio)
+
+<a name="TransporteDto"></a>
+
 ### Ejemplo de JSON para la API REST basado en `TransporteDto`
 ```
 public class TransporteDto
@@ -614,7 +641,12 @@ CamposAdicionales: Información adicional en formato XML o similar.
 IdGVA18: Identificador único de GVA18.
 
 ```
-### Ejemplo de JSON para la API REST basado en `VendedorDto`
+
+[<sub>Volver</sub>](#inicio)
+
+<a name="VentasTalonariosDto"></a>
+
+### Ejemplo de JSON para la API REST basado en `VentasTalonariosDto`
 ```
 {
     "IdGVA43": 106,
@@ -725,6 +757,11 @@ TipoAutorizacion: Tipo de autorización.
 IdGVA43TalonarioCAEA: Identificador del talonario CAEA.
 UsaDestinoImpresionEnPdf: Indica si se utiliza la impresión de destino en PDF.
 ```
+
+[<sub>Volver</sub>](#inicio)
+
+<a name="ProveedorDto"></a>
+
 ### Ejemplo de JSON para la API REST basado en `ProveedorDto`
 ```
 {
@@ -1002,4 +1039,7 @@ CMVigenciaCoeficiente: Coeficiente de vigencia.
 IdSucursalDestino: Identificador de la sucursal de destino.
 Habilitado: Indica si el proveedor está habilitado.
 ```
+
+[<sub>Volver</sub>](#inicio)
+
 

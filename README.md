@@ -387,114 +387,28 @@ DescDim5: Descripción de la quinta dimensión
 
 ### Ejemplo de JSON para la API REST basado en `VendedorDto`
 ```json
-public class VendedorDto
 {
-    /// <summary>
-    /// Código del vendedor
-    /// </summary>
-    [Required]
-    public string Codigo { get; set; }
-
-    /// <summary>
-    /// Nombre del vendedor
-    /// </summary>
-    [Required]
-    public string Nombre { get; set; }
-
-    /// <summary>
-    /// Porcentaje de comisión
-    /// </summary>
-    public decimal PorcentageComision { get; set; }
-
-    /// <summary>
-    /// Código de la tienda
-    /// </summary>
-    public string CodigoShop { get; set; }
-
-    /// <summary>
-    /// Indica si el vendedor está inhabilitado
-    /// </summary>
-    public bool Inhabilita { get; set; }
-
-    /// <summary>
-    /// Tipo de documento (DNI, pasaporte, etc.)
-    /// </summary>
-    public string TipoDoc { get; set; }
-
-    /// <summary>
-    /// Número de documento
-    /// </summary>
-    public string NumeroDoc { get; set; }
-
-    /// <summary>
-    /// Domicilio del vendedor
-    /// </summary>
-    public string Domicilio { get; set; }
-
-    /// <summary>
-    /// Código postal
-    /// </summary>
-    public string CodPostal { get; set; }
-
-    /// <summary>
-    /// Localidad
-    /// </summary>
-    public string Localidad { get; set; }
-
-    /// <summary>
-    /// Código de provincia
-    /// </summary>
-    public string CodProvin { get; set; }
-
-    /// <summary>
-    /// Teléfono
-    /// </summary>
-    public string Telefono { get; set; }
-
-    /// <summary>
-    /// Correo electrónico
-    /// </summary>
-    public string EMail { get; set; }
-
-    /// <summary>
-    /// Código GVA23 (posiblemente un código de referencia interno)
-    /// </summary>
-    public string CodGVA23 { get; set; }
-
-    /// <summary>
-    /// Observaciones adicionales
-    /// </summary>
-    public string Observaciones { get; set; }
-
-    /// <summary>
-    /// Código GVA18 (posiblemente otro código de referencia interno)
-    /// </summary>
-    public string CodGVA18 { get; set; }
-
-    /// <summary>
-    /// Versión de la fila (para control de cambios)
-    /// </summary>
-    public int RowVersion { get; set; }
-
-    /// <summary>
-    /// Campos adicionales (para datos no especificados en esta clase)
-    /// </summary>
-    public string CamposAdicionales { get; set; }
-
-    /// <summary>
-    /// ID de GVA23 (posiblemente un identificador único)
-    /// </summary>
-    public int IdGVA23 { get; set; }
-
-    /// <summary>
-    /// ID de GVA18 (posiblemente un identificador único)
-    /// </summary>
-    public int IdGVA18 { get; set; }
-
-    /// <summary>
-    /// ID del tipo de documento en el sistema GVA
-    /// </summary>
-    public int IdTipoDocumentoGv { get; set; }
+  "Codigo": "VND001",
+  "Nombre": "Juan Pérez",
+  "PorcentageComision": 5.5,
+  "CodigoShop": "SHOP001",
+  "Inhabilita": false,
+  "TipoDoc": "DNI",
+  "NumeroDoc": "12345678",
+  "Domicilio": "Calle Falsa 123",
+  "CodPostal": "1000",
+  "Localidad": "Buenos Aires",
+  "CodProvin": "BA",
+  "Telefono": "+54 11 1234-5678",
+  "EMail": "juan.perez@example.com",
+  "CodGVA23": "GVA23001",
+  "Observaciones": "Vendedor con experiencia en ventas de tecnología.",
+  "CodGVA18": "GVA18001",
+  "RowVersion": 1,
+  "CamposAdicionales": "Campo extra para futuras ampliaciones.",
+  "IdGVA23": 1001,
+  "IdGVA18": 1002,
+  "IdTipoDocumentoGv": 2
 }
 
 Descripción de los Campos

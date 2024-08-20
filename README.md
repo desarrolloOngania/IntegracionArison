@@ -161,6 +161,7 @@ clase: Clase del cliente, como "A", "B", "C", etc. Ejemplo: "A".
 tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO". Ejemplo: "DISTRIBUIDOR".
 tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
 generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
+
 ```
 
 [<sub>Volver</sub>](#inicio)

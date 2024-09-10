@@ -34,11 +34,7 @@ Arison WMS | TMS - API REST Integración
 
 <a name="AntesDeEmpezar"></a>
 ### Antes de empezar
-Arison se integra fácilmente a cualquier sistema preexistente, ya sea por medio de nuestra API Rest, o cualquier otro método de integración, como importación de datos desde .CSV, .XML, .TXT, .XLS, intercambios por FTP, SQL Server, y muchos otros más.
-
-En el presente documento se listarán los métodos estándar de nuestra API Rest.
-
-Para conocer todas las posibilidades, no dude en contactarnos a info@arison.ar
+Arison se integra fácilmente a cualquier sistema preexistente, ya sea por medio de nuestra API Rest, o cualquier otro método de integración, como importación de datos desde .CSV, .XML, .TXT, .XLS, intercambios por FTP, SQL Server, y muchos otros más.  En el presente documento se listarán los métodos estándar de nuestra API Rest.  Para conocer todas las posibilidades, no dude en contactarnos a info@arison.ar
 
 <a name="versiones"></a>
 ### Integraciones soportadas por Arison

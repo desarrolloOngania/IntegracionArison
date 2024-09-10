@@ -3,12 +3,12 @@ Arison WMS | TMS - API REST Integración
 =======
 
 - [Generalidades](#generalidades)
+  - [Antes de empezar](#AntesDeEmpezar)
   - [Integraciones soportadas por Arison](#versiones)
   - [Estructura estándar de una URL en Arison](#url)
   - [Formatos de datos](#datos)
   - [Autenticación](#autenticacion)
   - [Consulta de datos](#consulta)
-  - [Otras integraciones](#otras)
 - [Documentación detallada de la API](#documentacion)
   - [Swagger](#swagger)
 - [Ambientes](#ambientes)
@@ -31,6 +31,12 @@ Arison WMS | TMS - API REST Integración
 <a name="generalidades"></a>
 
 ## Generalidades
+
+<a name="AntesDeEmpezar"></a>
+### Antes de empezar
+Arison se integra fácilmente a cualquier sistema preexistente, ya sea por medio de nuestra API Rest, o cualquier otro método de integración, como importación de datos desde .CSV, .XML, .TXT, .XLS, intercambios por FTP, SQL Server, y muchos otros más.
+En el presente documento se listarán los métodos estándar de nuestra API Rest.
+Para conocer todas las posibilidades, no dude en contactarnos a info@arison.ar
 
 <a name="versiones"></a>
 ### Integraciones soportadas por Arison
@@ -76,11 +82,6 @@ Para proteger los recursos de la API, Arison utiliza el metodo bearer token
 ### Consulta de datos
 
 Implementado Arison y contratado el modulo de integración comienzan a estar disponible la API con datos. 
-
-<a name="otras"></a>
-### Otras integraciones
-Nuestra API flexible se integra fácilmente con cualquier sistema, independientemente del formato o método de intercambio de datos, garantizando una adaptabilidad total a diversas plataformas y tecnologías. Nuestra API admite integraciones a través de múltiples métodos, incluyendo la importación de datos desde CSV, XML, archivos de texto, archivos excel, intercambios por FTP entre muchos otros mas.  
-Para obtener más información, no dude en consultar con Arison.
 
 <a name="documentacion"></a>
 ## Documentación detallada de la API

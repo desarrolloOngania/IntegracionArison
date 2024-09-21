@@ -27,8 +27,12 @@ Arison WMS | TMS - API REST Integración
 - [Requerimientos de Hardware](#requerimientoshardware)
   - [Servidor](#Servidor)
   - [Estación de trabajo](#Cliente)
-  
-  
+  - [Dispositivos Móviles](#Moviles)
+    - [Colectoras de datos](#Colectoras)
+    - [Celulares](#Celulares)
+    - [Lectoras](#Lectoras)
+    
+    
 
 <a name="generalidades"></a>
 
@@ -959,5 +963,23 @@ Habilitado: Indica si el proveedor está habilitado.
 
 
 [<sub>Volver</sub>](#inicio)
+
+<a name="Moviles"></a>
+
+# Dispositivos Móviles
+
+<a name="Colectoras"></a>
+  
+  ## Colectoras de datos
+
+<a name="Celulares"></a>
+  
+  ## Celulares
+
+<a name="Lectoras"></a>
+  
+  ## Lectoras
+  
+  [<sub>Volver</sub>](#inicio)
 
 

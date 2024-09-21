@@ -890,7 +890,7 @@ Habilitado: Indica si el proveedor está habilitado.
 
 <a name="requerimientoshardware"></a>
 
-### Requerimientos de Hardware
+# Requerimientos de Hardware
 
 <a name="Servidor"></a>
 

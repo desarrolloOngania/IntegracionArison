@@ -972,13 +972,28 @@ Habilitado: Indica si el proveedor está habilitado.
   
   ## Colectoras de datos
 
+### Sistema operativo: 
+  Android versión 7 o superior
+
+### Tamaño de pantalla:
+  5.5 pulgadas o superior
+
 <a name="Celulares"></a>
   
   ## Celulares
 
+Estos dispositivos serán utilizados en con la aplicación TMS para choferes, y tienen los mismos requisitos que las colectoras de datos.
+También pueden utilizarse conjuntamente con lectoras de datos, en reemplazo de las colectoras de datos.
+
 <a name="Lectoras"></a>
   
   ## Lectoras
+
+### Tipo de lectura:
+  Lectura 2D
+
+### Resistencia a golpes y polvo:
+  IP68 o superior
   
   [<sub>Volver</sub>](#inicio)
 

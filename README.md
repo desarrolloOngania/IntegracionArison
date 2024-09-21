@@ -890,15 +890,17 @@ Habilitado: Indica si el proveedor está habilitado.
 
 ### Requerimientos de Hardware
 
-##Requerimientos de Servidor:
-#Sistema Operativo:
+  ## Requerimientos de Servidor:
+    # Sistema Operativo:
 
-  Windows Server 2016 o superior (recomendado)
-  Windows 10 (para instalaciones de bajo volumen o pruebas)
-#Procesador:
+      Windows Server 2016 o superior (recomendado)
+      Windows 10 (para instalaciones de bajo volumen o pruebas)
 
-Procesador Intel o AMD de 64 bits (se recomienda mínimo un Quad-Core)
-Memoria RAM:
+    # Procesador:
+
+      Procesador Intel o AMD de 64 bits (se recomienda mínimo un Quad-Core)
+
+    ## Memoria RAM:
 
 8 GB como mínimo para instalaciones pequeñas
 16 GB o más para instalaciones con mayor carga de usuarios o procesamiento

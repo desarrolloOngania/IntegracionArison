@@ -24,7 +24,7 @@ Arison WMS | TMS - API REST Integración
   - [TransporteDto](#TransporteDto)
   - [VentasTalonariosDto](#VentasTalonariosDto)
   - [ProveedorDto](#ProveedorDto)
-
+- [Requerimientos de Hardware](#requerimientoshardware)
   
   
 
@@ -882,6 +882,60 @@ CMVigenciaCoeficiente: Coeficiente de vigencia.
 IdSucursalDestino: Identificador de la sucursal de destino.
 Habilitado: Indica si el proveedor está habilitado.
 ```
+
+[<sub>Volver</sub>](#inicio)
+
+
+<a name="requerimientoshardware"></a>
+
+### Requerimientos de Hardware
+
+##Requerimientos de Servidor:
+#Sistema Operativo:
+
+  Windows Server 2016 o superior (recomendado)
+  Windows 10 (para instalaciones de bajo volumen o pruebas)
+#Procesador:
+
+Procesador Intel o AMD de 64 bits (se recomienda mínimo un Quad-Core)
+Memoria RAM:
+
+8 GB como mínimo para instalaciones pequeñas
+16 GB o más para instalaciones con mayor carga de usuarios o procesamiento
+Almacenamiento:
+
+Disco duro con al menos 100 GB de espacio libre, preferentemente en unidades SSD para mejor rendimiento.
+La cantidad de espacio requerido puede variar según la cantidad de datos que maneje el sistema.
+Base de Datos:
+
+SQL Server 2016 o superior.
+Se recomienda contar con una versión estándar o enterprise para empresas medianas o grandes.
+Red:
+
+Conexión de red a 1 Gbps o superior.
+Acceso seguro desde las estaciones de trabajo al servidor a través de una red local (LAN) o VPN.
+Software adicional:
+
+.NET Framework 4.7.2 o superior.
+Internet Information Services (IIS) si se utilizarán módulos web.
+Requerimientos de Estación de Trabajo (Clientes):
+Sistema Operativo:
+
+Windows 10 o superior.
+Procesador:
+
+Intel Core i3 o superior.
+Memoria RAM:
+
+Mínimo 4 GB de RAM.
+Almacenamiento:
+
+Al menos 10 GB de espacio libre para la instalación del cliente y sus dependencias.
+Software adicional:
+
+Microsoft Office (si se utilizan integraciones, como la generación de reportes o documentos).
+Internet Explorer 11 o superior (si se utilizan interfaces web).
+
 
 [<sub>Volver</sub>](#inicio)
 

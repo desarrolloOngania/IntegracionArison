@@ -934,7 +934,7 @@ Habilitado: Indica si el proveedor está habilitado.
   [<sub>Volver</sub>](#inicio)
 
     
-  ### Requerimientos de Estación de Trabajo (Clientes):
+  ## Requerimientos de Estación de Trabajo (Clientes):
     
     # Sistema Operativo:
     
@@ -954,8 +954,8 @@ Habilitado: Indica si el proveedor está habilitado.
     
     # Software adicional:
     
-    Microsoft Office (si se utilizan integraciones, como la generación de reportes o documentos).
-    Internet Explorer 11 o superior (si se utilizan interfaces web).
+    Microsoft Office (si se utilizan integraciones, como la generación de reportes, documentos, o importaciones propias de la gestión).
+    Internet Explorer 11 o superior.
 
 
 [<sub>Volver</sub>](#inicio)

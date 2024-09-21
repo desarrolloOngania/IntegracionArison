@@ -25,6 +25,8 @@ Arison WMS | TMS - API REST Integración
   - [VentasTalonariosDto](#VentasTalonariosDto)
   - [ProveedorDto](#ProveedorDto)
 - [Requerimientos de Hardware](#requerimientoshardware)
+  - [Servidor](#Servidor)
+  - [Estación de trabajo](#Cliente)
   
   
 
@@ -890,6 +892,8 @@ Habilitado: Indica si el proveedor está habilitado.
 
 ### Requerimientos de Hardware
 
+<a name="Servidor"></a>
+
   ## Requerimientos de Servidor:
     # Sistema Operativo:
 
@@ -924,6 +928,11 @@ Habilitado: Indica si el proveedor está habilitado.
     
     .NET Framework 4.7.2 o superior.
     Internet Information Services (IIS) si se utilizarán módulos web.
+
+  <a name="Cliente"></a>
+
+  [<sub>Volver</sub>](#inicio)
+
     
   ### Requerimientos de Estación de Trabajo (Clientes):
     

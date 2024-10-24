@@ -922,6 +922,7 @@ Habilitado: Indica si el proveedor está habilitado.
     
     SQL Server 2016 o superior.
     Se recomienda contar con una versión estándar o enterprise para empresas medianas o grandes.
+    Puede utilizarse la versión express en bases de datos pequeñas.
     
     # Red:
     

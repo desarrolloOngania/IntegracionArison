@@ -24,6 +24,7 @@ Arison WMS | TMS - API REST Integración
   - [TransporteDto](#TransporteDto)
   - [VentasTalonariosDto](#VentasTalonariosDto)
   - [ProveedorDto](#ProveedorDto)
+  - [MovimientoStockDto](#MovimientoStockDto)
 - [Requerimientos de Hardware](#requerimientoshardware)
   - [Servidor](#Servidor)
   - [Estación de trabajo](#Cliente)
@@ -891,6 +892,47 @@ Habilitado: Indica si el proveedor está habilitado.
 
 [<sub>Volver</sub>](#inicio)
 
+<a name="MovimientoStockDto"></a>
+
+### Ejemplo de JSON para la API REST basado en `MovimientoStockDto`
+
+```json
+{
+  "CodArticu": "ART12345",
+  "Cantidad": 100.5,
+  "CodDeposito": "01",
+  "TipoComprobante": "FAC",
+  "NumeroComprobante": "00012345678901",
+  "CodProveedor": "PR001",
+  "Fecha": "2024-11-15T12:34:56",
+  "NumeroPartida": "PART123456789",
+  "FechaVencimiento": "2025-12-31T00:00:00",
+  "Comentario": "Stock inicial",
+  "IdUsuario": 101,
+  "NombreUsuario": "Juan Pérez",
+  "Guid": "550e8400-e29b-41d4-a716-446655440000",
+  "IdDb": "2024-11-15T12:34:56",
+  "TipoMovimiento": "E"
+}
+Descripción de los Campos 
+CodArticu: Código del artículo relacionado con el movimiento de stock.
+Cantidad: Cantidad del artículo en el movimiento.
+CodDeposito: Código del depósito donde se realiza el movimiento.
+TipoComprobante: Tipo de comprobante asociado al movimiento.
+NumeroComprobante: Número de comprobante asociado al movimiento.
+CodProveedor: Código del proveedor relacionado con el movimiento.
+Fecha: Fecha del movimiento de stock.
+NumeroPartida: Número de partida asociado al artículo en el movimiento.
+FechaVencimiento: Fecha de vencimiento del artículo (si aplica).
+Comentario: Comentario asociado al movimiento.
+IdUsuario: Identificador del usuario que realiza el movimiento.
+NombreUsuario: Nombre del usuario que realiza el movimiento.
+Guid: Identificador único del movimiento.
+IdDb: Identificador de la base de datos del movimiento.
+TipoMovimiento: Tipo de movimiento (E: entrada, S: salida).
+
+```
+[<sub>Volver</sub>](#inicio)
 
 <a name="requerimientoshardware"></a>
 

@@ -943,7 +943,7 @@ TipoMovimiento: Tipo de movimiento (E: entrada, S: salida).
   ## Requerimientos de Servidor:
     # Sistema Operativo:
 
-      Windows Server 2016 o superior (recomendado)
+-       Windows Server 2017 (Versión 14) o superior (recomendado)
       Windows 10 (para instalaciones de bajo volumen o pruebas)
 
     # Procesador:
@@ -962,7 +962,7 @@ TipoMovimiento: Tipo de movimiento (E: entrada, S: salida).
 
     # Base de Datos:
     
-    SQL Server 2016 o superior.
+    SQL Server 2017 (Versión 14) o superior.
     Se recomienda contar con una versión estándar o enterprise para empresas medianas o grandes.
     Puede utilizarse la versión express en bases de datos pequeñas.
     

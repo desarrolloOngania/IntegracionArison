@@ -28,7 +28,6 @@ Arison WMS | TMS - API REST Integración
   - [OrdenesDeCompraEncabezadosDto](#OrdenesDeCompraEncabezadosDto)
   - [OrdenesDeCompraRenglonesDto](#OrdenesDeCompraRenglonesDto)
   - [ProveedorDto](#ProveedorDto)
-  - [RequerimientoResponseDto](#RequerimientoResponseDto)
   - [RequerimientoVentaDto](#RequerimientoVentaDto)
   - [TalonariosDeOrdenesDto](#TalonariosDeOrdenesDto)
   - [TalonariosDeVentasDto](#TalonariosDeVentasDto)
@@ -160,26 +159,51 @@ La selección del ambiente se realiza de la siguiente manera:
 
 ```json
 {
-  "codigo": "C12345",
-  "documentoIdentificatorio": "20304050607",
-  "nombre": "Acme Corporation S.A.",
-  "nombreComercial": "Acme",
-  "clase": "A",
-  "tipo": "DISTRIBUIDOR",
-  "tiempoDescarga": 15,
-  "generarPasswordEntrega": true
+  "CodigoCliente": "CLI001",
+  "RazonSocial": "Cliente Ejemplo",
+  "GenerarPasswordEntrega": 1,
+  "Clase": "A",
+  "TipoCliente": "DISTRIBUIDOR",
+  "TiempoDescarga": 30,
+  "Empresa": "E",
+  "CPostal": "1234",
+  "NCuit": "30-12345678-9",
+  "Domicilio": "Dirección Ejemplo",
+  "Email": "cliente@ejemplo.com",
+  "Localidad": "Localidad Ejemplo",
+  "Observacion": "Observación Ejemplo",
+  "Habilitado": 1,
+  "CodZona": "Z1",
+  "CodProvincia": "BA",
+  "CodVendedor": "V1",
+  "CodTransporte": "TRA001",
+  "CondVenta": "CC",
+  "Filler1": "Filler1 Ejemplo",
+  "Filler2": 123.45,
+  "PorcBonif": 10.25
 }
-
-Descripción de los campos
-codigo: Código identificatorio del cliente. Ejemplo: "C12345".
-documentoIdentificatorio: CUIT o documento identificatorio del cliente. Ejemplo: "20304050607".
-nombre: Razón social del cliente. Ejemplo: "Acme Corporation S.A.".
-nombreComercial: Nombre comercial del cliente. Ejemplo: "Acme".
-clase: Clase del cliente, como "A", "B", "C", etc. Ejemplo: "A".
-tipo: Categorización del cliente, como "DISTRIBUIDOR", "INDUSTRIA", "COMERCIO". Ejemplo: "DISTRIBUIDOR".
-tiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 15.
-generarPasswordEntrega: Indicador de si se debe generar un código de entrega para el cliente. Ejemplo: true.
-
+CodigoCliente: Código identificatorio del cliente (Obligatorio). Caracteres permitidos: 6. Tipo Texto.
+RazonSocial: Razón social el cliente. Caracteres permitidos: 60. Tipo Texto.
+GenerarPasswordEntrega: Generar código de entrega (Uso en módulo ruteador). Valores permitidos: Enteros positivos. Ejemplo: 1
+Clase: Clase del cliente. Caracteres permitidos: 15. Tipo Texto.
+TipoCliente: Categorización del cliente. Ejemplo: DISTRIBUIDOR, INDUSTRIA, COMERCIO. Caracteres permitidos: 15. Tipo Texto.
+TiempoDescarga: Tiempo en minutos de descarga de entregas del cliente. Ejemplo: 2 minutos (Uso en módulo ruteador). Valores permitidos: Enteros positivos. Ejemplo: 1
+Empresa: Empresa. (OBLIGATORIO). Caracteres permitidos: 1. Tipo Texto.
+CPostal: Código postal del cliente. Caracteres permitidos: 8. Tipo Texto.
+NCuit: CUIT o documento identificatorio del cliente. Caracteres permitidos: 20. Tipo Texto.
+Domicilio: Domicilio del cliente. Caracteres permitidos: 30. Tipo Texto.
+Email: Correo electrónico del cliente. Caracteres permitidos: 255. Tipo Texto.
+Localidad: Localidad del cliente. Caracteres permitidos: 20. Tipo Texto.
+Observacion: Observaciones adicionales. Caracteres permitidos: 60. Tipo Texto.
+Habilitado: Indica si el cliente está habilitado. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+CodZona: Código de Zona. Caracteres permitidos: 2. Tipo Texto.
+CodProvincia: Código de Provincia del cliente. Caracteres permitidos: 2. Tipo Texto.
+CodVendedor: Código del vendedor. Caracteres permitidos: 2. Tipo Texto.
+CodTransporte: Código del camión/transporte. Caracteres permitidos: 10. Tipo Texto.
+CondVenta: Condición de venta del cliente. Caracteres permitidos: 2. Tipo Texto.
+Filler1: Campo de uso interno.
+Filler2: Campo de uso interno.
+PorcBonif: Porentaje de bonificación. Valores permitidos: Decimal positivo con hasta 2 decimales | Ejemplo: 10.25
 ```
 
 [<sub>Volver</sub>](#inicio)
@@ -191,38 +215,105 @@ generarPasswordEntrega: Indicador de si se debe generar un código de entrega pa
 
 ```json
 {
-  "codigo": "A12345",
-  "codigoBarra": "1234567890123",
-  "descripcion": "Producto Ejemplo",
-  "descripcionAdicional": "Versión mejorada del Producto Ejemplo",
-  "sinonimo": "ProductoX",
-  "equivalencia": 1.5,
-  "permiteSobreVenta": true,
-  "diasPreparacion": 3,
-  "diasAlVencimiento": 180,
-  "codigoDepositoProveedor": "D001",
-  "codigoZona": "Z001",
-  "idMedidaPeso": 1,
-  "peso": 2.5,
-  "idMedidaVolumen": 2,
-  "volumen": 1.75
+  "CodigoArticulo": "123 ALE00",
+  "Descripcion": "Descripción Ejemplo",
+  "DescripcionAdicional": "Descripción Adicional Ejemplo",
+  "Equivalencia": 50.500000,
+  "Perfil": "A",
+  "PtoPedido": 25.250000,
+  "Sinonimo": "Sinónimo Ejemplo",
+  "Stock": 1,
+  "UsaPartida": 0,
+  "Usuario": "Usuario Ejemplo",
+  "Terminal": "Terminal Ejemplo",
+  "Observaciones": "Observaciones Ejemplo",
+  "CodigoBarra": "1234567890123",
+  "IdMedidaStock": 4,
+  "DescargaNegativoStock": 1,
+  "Base": "Base Ejemplo",
+  "UsaSerie": 0,
+  "UsaScrap": 1,
+  "UsaEsc": 0,
+  "Virtual": 1,
+  "GenOf": 1,
+  "Profundidad": 10.0025,
+  "Altura": 10.0025,
+  "Ancho": 10.0025,
+  "CodigoDeposito": "FF",
+  "DepositoOrigen": "AA",
+  "Observacio": "Observación Ejemplo",
+  "Comercial": 1,
+  "Filler1": "Filler1 Ejemplo",
+  "Filler2": 123.456,
+  "DiasVto": 30,
+  "PeEspec": 2.500000,
+  "DepCalida": "CC",
+  "EstadoEla": "ELA",
+  "EstadoVta": "VTA",
+  "CoefRendi": 1.250000,
+  "PermiteSobreVenta": 0,
+  "DiasPreparacion": 7,
+  "DepositoProveedor": "PP",
+  "CodigoZona": 1,
+  "Peso": 5.000000,
+  "IdMedidaPeso": 2,
+  "Volumen": 0.500000,
+  "IdMedidaVolumen": 3,
+  "DiasAlVencimiento": 60,
+  "Rnpa": "RNPA Ejemplo",
+  "CamposAdicionales": "{}"
 }
-Descripción de los campos
-codigo: Código del artículo. Ejemplo: "A12345".
-codigoBarra: Código de barras del artículo. Ejemplo: "1234567890123".
-descripcion: Descripción principal del artículo. Ejemplo: "Producto Ejemplo".
-descripcionAdicional: Descripción secundaria del artículo. Ejemplo: "Versión mejorada del Producto Ejemplo".
-sinonimo: Sinónimo para identificar el artículo. Ejemplo: "ProductoX".
-equivalencia: Equivalencia del artículo en unidades. Ejemplo: 1.5.
-permiteSobreVenta: Indica si se permite el stock negativo del artículo. Ejemplo: true.
-diasPreparacion: Número de días de preparación del artículo. Ejemplo: 3.
-diasAlVencimiento: Días restantes hasta el vencimiento del artículo. Ejemplo: 180.
-codigoDepositoProveedor: Código del depósito que provee al artículo por defecto. Ejemplo: "D001".
-codigoZona: Código de la zona donde se almacena el artículo. Ejemplo: "Z001".
-idMedidaPeso: Identificador de la unidad de medida del peso del artículo. Ejemplo: 1.
-peso: Peso del artículo en la unidad correspondiente. Ejemplo: 2.5.
-idMedidaVolumen: Identificador de la unidad de medida del volumen del artículo. Ejemplo: 2.
-volumen: Volumen del artículo en la unidad correspondiente. Ejemplo: 1.75.
+¡Claro que sí, pa! ¡Aquí te repito la documentación de los campos del DTO ArticuloDto!
+
+Documentación de los campos del DTO ArticuloDto:
+
+CodigoArticulo: Código del artículo. (OBLIGATORIO). Caracteres permitidos: 15. Ejemplo "123 ALE00".
+Descripcion: Descripción principal del artículo. Caracteres permitidos: 30. Ejemplo "Movimiento de stock".
+DescripcionAdicional: Descripción adicional del artículo. Caracteres permitidos: 20. Ejemplo "Movimiento de stock".
+Equivalencia: Equivalencia del artículo. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 50.500000
+Perfil: Tipo de artículo. Caracteres permitidos: 1 | C: Compra, V: Venta, A: Ambos, N: Inhabilitado
+PtoPedido: Cantidad en la que se dispara un requerimiento de producción o compras. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 50.500000
+Sinonimo: Sinónimo para identificar el artículo. Caracteres permitidos: 15. Tipo Texto
+Stock: Permite stock. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+UsaPartida: Utiliza partida. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+Usuario: Usuario que da el alta a el artículo.(OBLIGATORIO). Caracteres permitidos: 120. Tipo Texto
+Terminal: Terminal/Dispositivo.(OBLIGATORIO). Caracteres permitidos: 255. Tipo Texto
+Observaciones: Observaciones adicionales. Caracteres permitidos: 255. Tipo Texto
+CodigoBarra: Código de barra del articulo. Caracteres permitidos: 25. Tipo Texto
+IdMedidaStock: Id de Medida (Ejemplo: Kg(4), Sin Medida(0)). (OBLIGATORIO). Valores permitidos: Enteros positivos. Ejemplo: 1
+DescargaNegativoStock: Permite Descarga negativa en stock. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+Base: Código base del artículo. Caracteres permitidos: 15. Tipo Texto
+UsaSerie: Utiliza serie. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+UsaScrap: Utiliza scrap . Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+UsaEsc: Utiliza escalar. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+Virtual: Permite virtual (OBLIGATORIO). Valores permitidos: Entero Ejemplo: 1 | 0
+GenOf: Permite Generar Orden de Trabajo. (OBLIGATORIO). Valores permitidos: Entero Ejemplo: 1 | 0
+Profundidad: Longitud expresada en mm. (OBLIGATORIO). Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+Altura: Altura. (OBLIGATORIO). Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+Ancho: Ancho. (OBLIGATORIO). Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+CodigoDeposito: Código Depósito. Caracteres permitidos: 2. Tipo Texto
+DepositoOrigen: Depósito Origen. Caracteres permitidos: 2. Tipo Texto
+Observacio: Observaciones. Caracteres permitidos: 255. Tipo Texto
+Comercial: Permite Comercial. (OBLIGATORIO). Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+Filler1: campo de uso interno.Texto (OBLIGATORIO)
+Filler2: campo de uso interno.Decimal (OBLIGATORIO)
+DiasVto: Días Vencimiento.(OBLIGATORIO). Valores permitidos: Enteros positivos. Ejemplo: 1
+PeEspec: Peso específico. (OBLIGATORIO). Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+DepCalida: Depósito Calidad. (OBLIGATORIO). Caracteres permitidos: 2. Tipo Texto
+EstadoEla: EstadoEla. (OBLIGATORIO). Caracteres permitidos: 3. Tipo Texto
+EstadoVta: Estado Venta. (OBLIGATORIO). Caracteres permitidos: 3. Tipo Texto
+CoefRendi: Coeficiente Rendimiento ?. (OBLIGATORIO) Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+PermiteSobreVenta: Permite stock negativo del artículo. Valores permitidos: Entero Ejemplo: 1:Sí | 0:No
+DiasPreparacion: Días de preparación del artículo. Valores permitidos: Enteros positivos. Ejemplo: 1
+DepositoProveedor: Depósito Proveedor. Caracteres permitidos: 2. Tipo Texto
+CodigoZona: Código de zona donde se guarda el artículo. Valores permitidos: Enteros positivos. Ejemplo: 1
+Peso: Peso del artículo. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+IdMedidaPeso: Id de la medida del peso del artículo. Valores permitidos: Enteros positivos. Ejemplo: 1
+Volumen: Volumen del artículo. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025
+IdMedidaVolumen: Id de la medida del volumen del artículo. Valores permitidos: Enteros positivos. Ejemplo: 1
+DiasAlVencimiento: Días hasta el vencimiento del artículo. Valores permitidos: Enteros positivos. Ejemplo: 1
+Rnpa: Certificado Registro Nacional de Productos Alimenticios. Caracteres permitidos: 100. Tipo Texto.
+CamposAdicionales: Campos adicionales al producto como escala (Formato JSON). Caracteres permitidos: 255. Tipo Texto.
 ```
 
 [<sub>Volver</sub>](#inicio)
@@ -319,447 +410,425 @@ Observacion: Observaciones adicionales. Caracteres permitidos: -. Tipo Texto. Ej
 <a name= "MonedaDto"></a>
 ## Ejemplo de Json basado en `MonedaDto`
 ```json
+{
+  "IdMoneda": 1,
+  "CodMoneda": "USD",
+  "DescMoneda": "Dólar Estadounidense",
+  "SimboloMoneda": "$",
+  "TipoMoneda": "Extranjera",
+  "CantDecMoneda": 2,
+  "Observaciones": "Moneda utilizada para transacciones internacionales."
+}
+
+IdMoneda: Identificador de tabla moneda. Valores permitidos: Enteros positivos. Ejemplo: 1.
+CodMoneda: Código de moneda. (OBLIGATORIO). Caracteres permitidos: -. Tipo Texto. Ejemplo: "USD".
+DescMoneda: Descripción de moneda. Caracteres permitidos: -. Tipo Texto. Ejemplo: "Dólar Estadounidense".
+SimboloMoneda: Símbolo de moneda. (OBLIGATORIO). Caracteres permitidos: 3. Tipo Texto. Ejemplo: "$".
+TipoMoneda: Tipo de moneda. Caracteres permitidos: -. Tipo Texto. Ejemplo: "Extranjera".
+CantDecMoneda: Cantidad de decimales en moneda. Valores permitidos: Enteros positivos. Ejemplo: 2.
+Observaciones: Observaciones adicionales. Caracteres permitidos: 1000. Tipo Texto. Ejemplo: "Moneda utilizada para transacciones internacionales.".
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "OrdenesDeCompraEncabezadosDto"></a>
 ## Ejemplo de Json basado en `OrdenesDeCompraEncabezadosDto`
 ```json
+{
+  "Id_OrdenCompra": 1,
+  "Filler": "Valor de relleno",
+  "CodProveedor": "PROV01",
+  "Talonario": 1,
+  "NroOrdenCompra": "OC-20240315-001",
+  "FechaGen": "2024-03-15T10:00:00",
+  "FechaVig": "2024-03-31T23:59:59",
+  "Leyenda1": "Entrega en 7 días",
+  "Leyenda2": "Pago a 30 días",
+  "Leyenda3": "Descuento del 5%",
+  "Leyenda4": "",
+  "Leyenda5": "",
+  "Observaciones": "Orden de compra para repuestos de maquinaria.",
+  "Cierre": 0,
+  "Cumplido": 0
+}
+
+Id_OrdenCompra: Identificador de la orden de compra. (OBLIGATORIO). Valores permitidos: Enteros positivos. Ejemplo: 1.
+Filler: Campo de uso interno. Texto.
+CodProveedor: Código de proveedor. (OBLIGATORIO). Caracteres permitidos: 6. Tipo Texto. Ejemplo: "PROV01".
+Talonario: Número talonario. Valores permitidos: Enteros positivos. Ejemplo: 1.
+NroOrdenCompra: Número orden de compra. (OBLIGATORIO). Caracteres permitidos: 14. Tipo Texto. Ejemplo: "OC-20240315-001".
+FechaGen: Fecha de creación de orden de compra. Ejemplo: "2024-03-15T10:00:00".
+FechaVig: Fecha vigente de orden de compra. Ejemplo: "2024-03-31T23:59:59".
+Leyenda1: Comentarios / Leyenda. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Entrega urgente".
+Leyenda2: Comentarios / Leyenda. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Pago con cheque".
+Leyenda3: Comentarios / Leyenda. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Sin cargo de envío".
+Leyenda4: Comentarios / Leyenda. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "".
+Leyenda5: Comentarios / Leyenda. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "".
+Observaciones: Observaciones de orden de compra. Caracteres permitidos: -. Tipo Texto. Ejemplo: "Orden de compra para materiales de construcción.".
+Cierre: Orden en estado cerrada. Valores permitidos: Entero. Ejemplo: 1: Sí | 0: No.
+Cumplido: Orden en estado cumplida. Valores permitidos: Entero. Ejemplo: 1: Sí | 0: No.
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "OrdenesDeCompraRenglonesDto"></a>
 ## Ejemplo de Json basado en `OrdenesDeCompraRenglonesDto`
 ```json
-```
-[<sub>Volver</sub>](#inicio)
+{
+  "IdOcRenglones": 1,
+  "IdOcEncabezado": 1,
+  "Talonario": 1,
+  "NroOrdenCo": "OC-20240315-001",
+  "NroRenglonOc": 1,
+  "Filler": "Valor de relleno",
+  "CodDeposi": "DP",
+  "CodArticu": "ART001",
+  "CantPedida": 10.50,
+  "CantPendiente": 10.50,
+  "CantRecibida": 0.00,
+  "Cierre": 0
+}
 
-<a name= "RequerimientoResponseDto"></a>
-## Ejemplo de Json basado en `RequerimientoResponseDto`
-```json
+IdOcRenglones: Identificador de renglones ordenes de compra. (OBLIGATORIO). Valores permitidos: Enteros positivos. Ejemplo: 1.
+IdOcEncabezado: Identificador del encabezado de ordenes de compra. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Talonario: Número talonario. Valores permitidos: Enteros positivos. Ejemplo: 1.
+NroOrdenCo: Número orden de compra. (OBLIGATORIO). Caracteres permitidos: 14. Tipo Texto. Ejemplo: "OC-20240315-001".
+NroRenglonOc: Número de renglón de orden de compra. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Filler: Comentarios.
+CodDeposi: Código de depósito para orden de compra. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "DP".
+CodArticu: Código de artículo para orden de compra. Caracteres permitidos: 15. Tipo Texto. Ejemplo: "ART001".
+CantPedida: Cantidad de stock solicitada para orden de compra. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+CantPendiente: Cantidad pendiente por cumplir de cantidad pedida de la orden. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+CantRecibida: Cantidad real recibida de la orden de compra. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+Cierre: Aplica cierre de orden de compra. Valores permitidos: Entero Ejemplo: 1: Sí | 0: No.
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "RequerimientoVentaDto"></a>
 ## Ejemplo de Json basado en `RequerimientoVentaDto`
 ```json
+{
+  "Empresa": "M",
+  "CodCd": "CD",
+  "CodDeposito": "DP",
+  "IdTabla": 1,
+  "TablaOrigen": "PED",
+  "CodEstado": 1,
+  "Estado": "Pendiente",
+  "CantPedid": 10.50,
+  "CantADes": 10.50,
+  "CantPenD": 0.00,
+  "CodArticu": "ART001",
+  "NRenglon": 1,
+  "NroPedido": "PED-20240315-001",
+  "TalonPed": 1,
+  "CodRequisisor": "CLI001",
+  "NombreRequisisor": "Cliente Ejemplo",
+  "FechaPedi": "2024-03-15T10:00:00",
+  "FechaEntr": "2024-03-20T10:00:00",
+  "FechaApru": null,
+  "Clase": "A",
+  "Descripcion": "Artículo Ejemplo",
+  "DescAdic": "Descripción adicional",
+  "DescCond": "Condición de venta",
+  "Transporte": "Transporte Ejemplo",
+  "Localidad": "Localidad Ejemplo",
+  "Direccion": "Dirección Ejemplo",
+  "Provincia": "Provincia Ejemplo",
+  "Leyenda1": "Leyenda 1",
+  "Leyenda2": "Leyenda 2",
+  "Leyenda3": "Leyenda 3",
+  "Leyenda4": "Leyenda 4",
+  "Leyenda5": "Leyenda 5",
+  "TipoCliente": "FINAL",
+  "Vendedor": "Vendedor Ejemplo",
+  "UnidadMedidaSeleccionada": "U",
+  "EquivaleV": 1.00,
+  "TCompAsoc": "FAC",
+  "NCompAsoc": "FAC-20240315-001",
+  "Precio": 100.00,
+  "MonCte": 1,
+  "CodTransp": "TRA001",
+  "IdDireccionEntrega": 1,
+  "DepoProveedor": "DP",
+  "Comentario": "Comentario adicional",
+  "NroOComp": "OC-20240315-001",
+  "TotalPed": 105.00,
+  "IdUsuario": 1,
+  "Terminal": "Terminal Ejemplo",
+  "CodVended": "VEND001",
+  "CondVenta": 1,
+  "NLista": 1
+}
+
+IdRequerimientoDeVenta: Identificador de requerimiento. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Empresa: 'M' para db maestra / 'B' para db alternativa. Caracteres permitidos: 1. Tipo Texto. Ejemplo: "M".
+CodCd: Centro de distribución que atenderá la demanda. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "CD".
+CodDeposito: Código de depósito seleccionado para abastecer la demanda. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "DP".
+IdTabla: Identificador único de la tabla de origen. Valores permitidos: Enteros positivos. Ejemplo: 1.
+TablaOrigen: Nombre de la tabla de origen. Caracteres permitidos: 5. Tipo Texto. Ejemplo: "PED".
+CodEstado: Código que representa el estado del pedido. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Estado: Descripción del estado del pedido. Caracteres permitidos: 11. Tipo Texto. Ejemplo: "Pendiente".
+CantPedid: Cantidad pedida originalmente en el pedido. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+CantADes: Cantidad habilitada para recolectarse. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+CantPenD: Cantidad no remitida aún. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+CodArticu: Código único del artículo solicitado. Caracteres permitidos: 15. Tipo Texto. Ejemplo: "ART001".
+NRenglon: Número del renglón del requerimiento dentro del pedido. Valores permitidos: Enteros positivos. Ejemplo: 1.
+NroPedido: Número de identificación del pedido. Caracteres permitidos: 14. Tipo Texto. Ejemplo: "PED-20240315-001".
+TalonPed: Código del talonario asociado al pedido. Valores permitidos: Enteros positivos. Ejemplo: 1.
+CodRequisisor: Código del cliente o requisitor que solicitó el pedido. Caracteres permitidos: 6. Tipo Texto. Ejemplo: "CLI001".
+NombreRequisisor: Nombre de cliente/requisisor. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Cliente Ejemplo".
+FechaPedi: Fecha de ingreso del pedido. Ejemplo: "2024-03-15T10:00:00".
+FechaEntr: Fecha solicitada para la entrega del pedido. Ejemplo: "2024-03-20T10:00:00".
+FechaApru: Fecha de aprobación del pedido (puede ser nula). Ejemplo: null.
+Clase: Categoría de cliente (A,B,C). Caracteres permitidos: 1. Tipo Texto. Ejemplo: "A".
+Descripcion: Descripción del artículo solicitado. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Artículo Ejemplo".
+DescAdic: Descripción adicional del artículo. Caracteres permitidos: 20. Tipo Texto. Ejemplo: "Descripción adicional".
+DescCond: Descripción de la condición de venta (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Condición de venta".
+Transporte: Datos de la entrega. Nombre del transporte (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Transporte Ejemplo".
+Localidad: Datos de la entrega. Localidad de la dirección (OBLIGATORIO remisión). Caracteres permitidos: 100. Tipo Texto. Ejemplo: "Localidad Ejemplo".
+Direccion: Datos de la entrega. Dirección de entrega (OBLIGATORIO remisión). Caracteres permitidos: 200. Tipo Texto. Ejemplo: "Dirección Ejemplo".
+Provincia: Datos de la entrega. Provincia de la dirección de entrega (OBLIGATORIO remisión). Caracteres permitidos: 20. Tipo Texto. Ejemplo: "Provincia Ejemplo".
+Leyenda1: Primera leyendas a imprimir (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Leyenda 1".
+Leyenda2: Segunda leyendas a imprimir (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Leyenda 2".
+Leyenda3: Tercera leyendas a imprimir (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Leyenda 3".
+Leyenda4: Cuarta leyendas a imprimir (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Leyenda 4".
+Leyenda5: Quinta leyendas a imprimir (OBLIGATORIO remisión). Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Leyenda 5".
+TipoCliente: Categorización del cliente (FINAL, FRANQUICIA, DISTRIBUIDOR, etc.). Caracteres permitidos: 18. Tipo Texto. Ejemplo: "FINAL".
+Vendedor: Nombre del vendedor asociado al pedido. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Vendedor Ejemplo".
+UnidadMedidaSeleccionada: Unidad de medida utilizada para expresar la cantidad del artículo. Caracteres permitidos: 1 (V/S). Tipo Texto. Ejemplo: "U".
+EquivaleV: Equivalencia entre unidades de medida y bultos. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+TCompAsoc: Tipo de comprobante asociado al pedido. Caracteres permitidos: 3. Tipo Texto. Ejemplo: "FAC".
+NCompAsoc: Número de comprobante asociado. Caracteres permitidos: 13. Tipo Texto. Ejemplo: "FAC-20240315-001".
+Precio: Precio unitario del artículo (puede ser nulo). Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+MonCte: Moneda corriente utilizada en el pedido. Valores permitidos: Enteros positivos. Ejemplo: 1.
+CodTransp: Datos de la entrega. Código del transporte (OBLIGATORIO remisión). Caracteres permitidos: 10. Tipo Texto. Ejemplo: "TRA001".
+IdDireccionEntrega: Identificador único de la dirección de entrega (OBLIGATORIO para remisión). Ejemplo: 1.
+DepoProveedor: Código del depósito que abastece la demanda. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "DP".
+Comentario: Comentario adicional. Caracteres permitidos: 100. Tipo Texto. Ejemplo: "Comentario adicional".
+NroOComp: ????????. Caracteres permitidos: 14. Tipo Texto. Ejemplo: "OC-20240315-001".
+TotalPed: Cantidad total solicitada. Valores permitidos: Decimal positivo con hasta 6 decimales | Ejemplo: 10.0025.
+IdUsuario: Identificador de usuario. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Terminal: Dispositivo logueado. Caracteres permitidos: 100. Tipo Texto. Ejemplo: "Terminal Ejemplo".
+CodVended: Código del vendedor. Ejemplo: "VEND001".
+CondVenta: Condición de venta. Valores permitidos: Enteros positivos. Ejemplo: 1.
+NLista: Número de lista. Valores permitidos: Enteros positivos. Ejemplo: 1.
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "TalonariosDeOrdenesDto"></a>
 ## Ejemplo de Json basado en `TalonariosDeOrdenesDto`
 ```json
+{
+  "NroTalonario": 1,
+  "DescTalonario": "Talonario Ejemplo",
+  "Tipo": "TA",
+  "CodComp": "FAC",
+  "NroSuc": 1,
+  "PrNroHab": 1,
+  "UlNroHab": 100,
+  "PrxNroUt": 2,
+  "IdUsuario": 1,
+  "Filler1": "Filler Ejemplo",
+  "Filler2": 123.456,
+  "MonCte": 1,
+  "CodMoneda": "ARS"
+}
+
+NroTalonario: Número del talonario. Valores permitidos: Enteros positivos. Ejemplo: 1.
+DescTalonario: Descripción del talonario. Caracteres permitidos: 20. Tipo Texto. Ejemplo: "Talonario Ejemplo".
+Tipo: Tipo de talonario. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "TA".
+CodComp: Código de comprobante. Caracteres permitidos: 3. Tipo Texto. Ejemplo: "FAC".
+NroSuc: Número de sucursal. Valores permitidos: Enteros positivos. Ejemplo: 1.
+PrNroHab: Primer número habilitado. Valores permitidos: Enteros positivos. Ejemplo: 1.
+UlNroHab: Último número habilitado. Valores permitidos: Enteros positivos. Ejemplo: 100.
+PrxNroUt: Próximo número habilitado. Valores permitidos: Enteros positivos. Ejemplo: 2.
+IdUsuario: Identificador de usuario. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Filler1: Campo de uso interno. Tipo texto.
+Filler2: Campo de uso interno. Tipo Decimal.
+MonCte: Moneda corriente. Valores permitidos: Enteros positivos. Ejemplo: 1.
+CodMoneda: Código de moneda. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "ARS".
+
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "TalonariosDeVentasDto"></a>
 ## Ejemplo de Json basado en `TalonariosDeVentasDto`
 ```json
+{
+  "Talonario": 1,
+  "Empresa": "M",
+  "Filler": "Filler Ejemplo",
+  "Descripcion": "Talonario de Ventas Ejemplo",
+  "NroDesde": "00000001",
+  "NroHasta": "00000100",
+  "Proximo": "00000002",
+  "Renglones": 10,
+  "Sucursal": "SUC01",
+  "Observaciones": "Observaciones Ejemplo",
+  "Comprob": "FAC"
+}
+
+Talonario: Código de talonario de ventas. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Empresa: Nombre de la empresa. Caracteres permitidos: 1. Tipo Texto. Ejemplo: "M".
+Filler: Campo de uso interno. Tipo texto.
+Descripcion: Descripción del talonario. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Talonario de Ventas Ejemplo".
+NroDesde: Número desde el cual empieza la numeración del talonario. Caracteres permitidos: 8. Tipo Texto. Ejemplo: "00000001".
+NroHasta: Número hasta el cual llega la numeración del talonario. Caracteres permitidos: 8. Tipo Texto. Ejemplo: "00000100".
+Proximo: Próximo número en la secuencia del talonario. Caracteres permitidos: 16. Tipo Texto. Ejemplo: "00000002".
+Renglones: Cantidad de renglones del talonario. Valores permitidos: Enteros positivos. Ejemplo: 10.
+Sucursal: Sucursal asociada al talonario. Caracteres permitidos: 5. Tipo Texto. Ejemplo: "SUC01".
+Observaciones: Observaciones adicionales. Tipo Texto. Ejemplo: "Observaciones Ejemplo".
+Comprob: Tipo de comprobante. Caracteres permitidos: 3. Tipo Texto. Ejemplo: "FAC".
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "ValoresEscalaDto"></a>
 ## Ejemplo de Json basado en `ValoresEscalaDto`
 ```json
+{
+  "CodEscala": "ES",
+  "CodValor": "VAL001",
+  "Descripcion": "Valor 1",
+  "Habilitado": 1
+}
+
+CodEscala: Código identificatorio de la escala. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "ES".
+CodValor: Código identificatorio del valor de la escala. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "VAL001".
+Descripcion: Descripción del valor. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "Valor 1".
+Habilitado: Define si el valor de la escala está habilitado. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
 ```
 [<sub>Volver</sub>](#inicio)
 
 <a name= "VendedoresDto"></a>
 ## Ejemplo de Json basado en `VendedoresDto`
 ```json
-```
-[<sub>Volver</sub>](#inicio)
-
-
-<a name="RequerimientoDto"></a>
-
-### Ejemplo de JSON basado en `RequerimientoDto`
-
-```json
 {
-  "empresa": "M",
-  "codCd": "CD001",
-  "codEstado": "E001",
-  "estado": "Pendiente",
-  "cantPedid": 100.0,
-  "cantADes": 80.0,
-  "cantPenD": 20.0,
-  "codArticu": "ART123",
-  "nRenglon": 1,
-  "nroPedido": "P12345",
-  "talonPed": "T001",
-  "codRequisisor": "C001",
-  "nombreRequisisor": "Cliente Ejemplo",
-  "fechaPedi": "2024-08-16T00:00:00",
-  "fechaEntr": "2024-08-20T00:00:00",
-  "descripcion": "Artículo Ejemplo",
-  "descAdic": "Descripción adicional del artículo",
-  "unidadMedidaSeleccionada": "UN",
-  "equivaleV": 1.0,
-  "descCond": "Condición de venta ejemplo",
-  "transporte": "Transporte Ejemplo",
-  "localidad": "Localidad Ejemplo",
-  "direccion": "Calle Ejemplo 123",
-  "provincia": "Provincia Ejemplo",
-  "leyenda1": "Leyenda 1",
-  "leyenda2": "Leyenda 2",
-  "leyenda3": "Leyenda 3",
-  "leyenda4": "Leyenda 4",
-  "leyenda5": "Leyenda 5",
-  "idDireccionEntrega": "DIR001",
-  "codTransp": "TR001",
-  "generador": "Pedidos",
-  "codDeposito": "DEP001",
-  "tReq": "PED",
-  "idTabla": "TBL001",
-  "tablaOrigen": "Tabla Origen Ejemplo",
-  "fechaApru": "2024-08-18T00:00:00",
-  "clase": "A",
-  "tipoCliente": "FINAL", 
-  "vendedor": "Vendedor Ejemplo", 
-  "tCompAsoc": "T001", 
-  "nCompAsoc": "C001",
-  "precio": 100.0, 
-  "monCte": "ARS", 
-  "depoProveedor": "DEP001" 
+  "Codigo": "VEND001",
+  "Nombre": "Vendedor Ejemplo",
+  "Inhabilitado": 0,
+  "TipoDoc": "DNI",
+  "NumeroDoc": "12345678",
+  "Telefono": "123-456-7890",
+  "EMail": "vendedor@ejemplo.com",
+  "Observaciones": "Observaciones Ejemplo"
 }
 
-Descripción de los campos:
-empresa: 'M' para base de datos maestra o 'B' para base de datos alternativa.
-codCd: Código del centro de distribución que atenderá la demanda.
-codEstado: Código que representa el estado del pedido.
-estado: Descripción del estado del pedido.
-cantPedid: Cantidad pedida originalmente en el pedido.
-cantADes: Cantidad habilitada para recolectarse.
-cantPenD: Cantidad no remitida aún.
-codArticu: Código único del artículo solicitado.
-nRenglon: Número del renglón del requerimiento dentro del pedido.
-nroPedido: Número de identificación del pedido.
-talonPed: Código del talonario asociado al pedido.
-codRequisisor: Código del cliente o requisitor que solicitó el pedido.
-nombreRequisisor: Nombre del cliente o requisitor.
-fechaPedi: Fecha de ingreso del pedido en el sistema.
-fechaEntr: Fecha solicitada para la entrega del pedido.
-descripcion: Descripción del artículo solicitado.
-descAdic: Descripción adicional del artículo.
-unidadMedidaSeleccionada: Unidad de medida utilizada para expresar la cantidad del artículo.
-equivaleV: Equivalencia entre unidades de medida y bultos.
-descCond: Descripción de la condición de venta (OBLIGATORIO para remisión).
-transporte: Nombre del transporte para la entrega (OBLIGATORIO para remisión).
-localidad: Localidad de la dirección de entrega (OBLIGATORIO para remisión).
-direccion: Dirección de entrega del pedido (OBLIGATORIO para remisión).
-provincia: Provincia de la dirección de entrega (OBLIGATORIO para remisión).
-leyenda1: Primera leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
-leyenda2: Segunda leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
-leyenda3: Tercera leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
-leyenda4: Cuarta leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
-leyenda5: Quinta leyenda a imprimir en la remisión (OBLIGATORIO para remisión).
-idDireccionEntrega: Identificador único de la dirección de entrega (OBLIGATORIO para remisión).
-codTransp: Código del transporte (OBLIGATORIO para remisión).
-generador: Fuente o generador del pedido, en este caso 'Pedidos'.
-codDeposito: Código del depósito seleccionado para abastecer la demanda.
-tReq: Tipo de requerimiento, en este caso 'PED'.
-idTabla: Identificador único de la tabla de origen.
-tablaOrigen: Nombre de la tabla de origen.
-fechaApru: Fecha de aprobación del pedido (puede ser nula).
-clase: Categoría del cliente (por ejemplo, A, B, C).
-tipoCliente: Tipo de cliente según la categorización (por ejemplo, FINAL, FRANQUICIA, DISTRIBUIDOR).
-vendedor: Nombre del vendedor asociado al pedido.
-tCompAsoc: Tipo de comprobante asociado al pedido.
-nCompAsoc: Número del comprobante asociado.
-precio: Precio unitario del artículo (puede ser nulo).
-monCte: Moneda corriente utilizada en el pedido.
-depoProveedor: Código del depósito que abastece la demanda.
+Codigo: Código del vendedor. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "VEND001".
+Nombre: Nombre del vendedor. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Vendedor Ejemplo".
+Inhabilitado: Indica si el vendedor está inhabilitado. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 0.
+TipoDoc: Tipo de documento. Caracteres permitidos: 4. Tipo Texto. Ejemplo: "DNI".
+NumeroDoc: Número de documento. Caracteres permitidos: 11. Tipo Texto. Ejemplo: "12345678".
+Telefono: Teléfono. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "123-456-7890".
+EMail: Correo electrónico. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "vendedor@ejemplo.com".
+Observaciones: Observaciones adicionales. Tipo Texto. Ejemplo: "Observaciones Ejemplo".
 ```
-
 [<sub>Volver</sub>](#inicio)
+
 
 <a name="DepositoDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `DepositoDto`
 ```json
 {
-  "CodigoDeposito": "DPT001",
-  "Nombre": "Depósito Principal",
+  "CodigoDeposito": "DP",
+  "Direccion": "Dirección Ejemplo",
+  "Nombre": "Depósito Ejemplo",
+  "Habilitado": 1,
+  "Observaciones": "Observaciones Ejemplo",
+  "DescDim1": "Dim 1",
+  "DescDim2": "Dim 2",
+  "DescDim3": "Dim 3",
+  "DescDim4": "Dim 4",
+  "DescDim5": "Dim 5",
+  "IdUsuario": 1,
+  "Filler1": "Filler Ejemplo",
+  "Filler2": 123.456,
+  "UsaStockUbicacion": 1,
   "UsaIDPallet": 1,
-  "CodigoDepositoTDI": 123,
+  "CodigoDepositoTDI": "TDI",
   "RecuentaInventario": 1,
-  "PidePalletOrigenEnPuk": 0,
+  "PidePalletOrigenEnPuk": 1,
   "PidePalletDestinoEnPuk": 1,
   "UsaZonas": 1,
-  "LecturaEnPicking": "Sí",
-  "LecturaEnAlmacenaje": "No",
-  "PickingMultiPallet": 0,
+  "LecturaEnPicking": "LECT1",
+  "LecturaEnAlmacenaje": "LECT2",
+  "PickingMultiPallet": 1,
   "AlmacenajeMultiPallet": 1,
   "VerificaStockEnEstiba": 1,
-  "FractionsEnable": 0,
-  "IdUbicacionNoHallados": 999,
-  "IdUbicacionPivot": 100,
+  "FractionsEnable": 1,
+  "IdUbicacionNoHallados": 1,
+  "IdUbicacionPivot": 2,
   "PermiteTransferenciaAUbicacion": 1,
   "EsDepositoDetallado": 1,
-  "IdUbicacionCuarentena": 200,
-  "CodigoCentroDistribucion": "CD001",
+  "IdUbicacionCuarentena": 3,
+  "CodigoCentroDistribucion": "CD",
   "DiasAlVencimiento": 30,
-  "DepositoDeTerceros": 0,
-  "DimensionCambioSentidoRecoleccion": 10,
-  "UsaStockUbicacion": 1,
-  "DescDim1": "Altura",
-  "DescDim2": "Ancho",
-  "DescDim3": "Largo",
-  "DescDim4": "Peso",
-  "DescDim5": "Volumen"
+  "DepositoDeTerceros": 0
 }
-
-Descripción de los Campos
-CodigoDeposito: Código del depósito (Requerido)
-Nombre: Nombre del depósito (Requerido)
-UsaIDPallet: Indica si se utiliza ID de pallet (0: No, 1: Sí)
-CodigoDepositoTDI: Código del depósito para TDI (Toma de inventario)
-RecuentaInventario: Indica si se realiza recuento de inventario (0: No, 1: Sí)
-PidePalletOrigenEnPuk: Indica si se pide pallet de origen en PUK (0: No, 1: Sí)
-PidePalletDestinoEnPuk: Indica si se pide pallet de destino en PUK (0: No, 1: Sí)
-UsaZonas: Indica si el depósito utiliza zonas (0: No, 1: Sí)
-LecturaEnPicking: Indica si se requiere lectura en picking (Sí/No)
-LecturaEnAlmacenaje: Indica si se requiere lectura en almacenaje (Sí/No)
-PickingMultiPallet: Indica si se permite picking multi-pallet (0: No, 1: Sí)
-AlmacenajeMultiPallet: Indica si se permite almacenaje multi-pallet (0: No, 1: Sí)
-VerificaStockEnEstiba: Indica si se verifica stock en estiba (0: No, 1: Sí)
-FractionsEnable: Indica si se habilita el uso de fracciones (0: No, 1: Sí)
-IdUbicacionNoHallados: ID de ubicación para productos no hallados
-IdUbicacionPivot: ID de ubicación pivote
-PermiteTransferenciaAUbicacion: Indica si se permite transferencia a ubicación (0: No, 1: Sí)
-EsDepositoDetallado: Indica si es un depósito detallado (0: No, 1: Sí)
-IdUbicacionCuarentena: ID de ubicación de cuarentena
-CodigoCentroDistribucion: Código del Centro de Distribución (CD) (Requerido)
-DiasAlVencimiento: Días al vencimiento de los productos en el depósito
-DepositoDeTerceros: Indica si el depósito pertenece a un tercero (0: No, 1: Sí)
-DimensionCambioSentidoRecoleccion: Dimensión para cambiar el sentido de recolección
-UsaStockUbicacion: Indica si se utiliza stock por ubicación (0: No, 1: Sí)
-DescDim1: Descripción de la primera dimensión
-DescDim2: Descripción de la segunda dimensión
-DescDim3: Descripción de la tercera dimensión
-DescDim4: Descripción de la cuarta dimensión
-DescDim5: Descripción de la quinta dimensión
-
+CodigoDeposito: Código del depósito. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "DP".
+Direccion: Dirección del depósito. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Dirección Ejemplo".
+Nombre: Nombre del depósito. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Depósito Ejemplo".
+Habilitado: Habilita el depósito. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+Observaciones: Observaciones del depósito. Tipo Texto. Ejemplo: "Observaciones Ejemplo".
+DescDim1: Descripción de la primera dimensión. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "Dim 1".
+DescDim2: Descripción de la segunda dimensión. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "Dim 2".
+DescDim3: Descripción de la tercera dimensión. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "Dim 3".
+DescDim4: Descripción de la cuarta dimensión. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "Dim 4".
+DescDim5: Descripción de la quinta dimensión. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "Dim 5".
+IdUsuario: Identificador de usuario logueado. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Filler1: Campo de uso interno (texto).
+Filler2: Campo de uso interno (decimal).
+UsaStockUbicacion: Indica si se utiliza stock por ubicación. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+UsaIDPallet: Indica si se utiliza ID de pallet. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+CodigoDepositoTDI: Código de depósito para TDI. Caracteres permitidos: 15. Tipo Texto. Ejemplo: "TDI".
+RecuentaInventario: Indica si se realiza recuento de inventario. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+PidePalletOrigenEnPuk: Indica si se pide pallet de origen en PUK. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+PidePalletDestinoEnPuk: Indica si se pide pallet de destino en PUK. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+UsaZonas: Indica si el depósito utiliza zonas. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+LecturaEnPicking: Indica si se requiere lectura en picking. Caracteres permitidos: 6. Tipo Texto. Ejemplo: "LECT1".
+LecturaEnAlmacenaje: Indica si se requiere lectura en almacenaje. Caracteres permitidos: 6. Tipo Texto. Ejemplo: "LECT2".
+PickingMultiPallet: Indica si se permite picking multi-pallet. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+AlmacenajeMultiPallet: Indica si se permite almacenaje multi-pallet. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+VerificaStockEnEstiba: Indica si se verifica stock en estiba. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+FractionsEnable: Indica si se habilita el uso de fracciones. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+IdUbicacionNoHallados: ID de ubicación para productos no hallados. Valores permitidos: Enteros positivos. Ejemplo: 1.
+IdUbicacionPivot: ID de ubicación pivote. Valores permitidos: Enteros positivos. Ejemplo: 2.
+PermiteTransferenciaAUbicacion: Indica si se permite transferencia a ubicación. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+EsDepositoDetallado: Indica si es un depósito detallado. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
+IdUbicacionCuarentena: ID de ubicación de cuarentena. Valores permitidos: Enteros positivos. Ejemplo: 3.
+CodigoCentroDistribucion: Código del Centro de Distribución (CD). Caracteres permitidos: 2. Tipo Texto. Ejemplo: "CD".
+DiasAlVencimiento: Días al vencimiento de los productos en el depósito. Valores permitidos: Enteros positivos. Ejemplo: 30.
+DepositoDeTerceros: Indica si el depósito pertenece a un tercero. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 0.
 ```
 
 [<sub>Volver</sub>](#inicio)
 
-<a name="VendedorDto"></a>
-
-### Ejemplo de JSON para la API REST basado en `VendedorDto`
-```json
-{
-  "Codigo": "VND001",
-  "Nombre": "Juan Pérez",
-  "PorcentageComision": 5.5,
-  "CodigoShop": "SHOP001",
-  "Inhabilita": false,
-  "TipoDoc": "DNI",
-  "NumeroDoc": "12345678",
-  "Domicilio": "Calle Falsa 123",
-  "CodPostal": "1000",
-  "Localidad": "Buenos Aires",
-  "CodProvin": "BA",
-  "Telefono": "+54 11 1234-5678",
-  "EMail": "juan.perez@example.com",
-  "CodGVA23": "GVA23001",
-  "Observaciones": "Vendedor con experiencia en ventas de tecnología.",
-  "CodGVA18": "GVA18001",
-  "RowVersion": 1,
-  "CamposAdicionales": "Campo extra para futuras ampliaciones.",
-  "IdGVA23": 1001,
-  "IdGVA18": 1002,
-  "IdTipoDocumentoGv": 2
-}
-
-Descripción de los Campos
-Codigo: Código del vendedor (Requerido)
-Nombre: Nombre del vendedor (Requerido)
-PorcentageComision: Porcentaje de comisión que recibe el vendedor.
-CodigoShop: Código de la tienda a la que está asociado el vendedor.
-Inhabilita: Indica si el vendedor está inhabilitado (true: Sí, false: No).
-TipoDoc: Tipo de documento del vendedor (DNI, pasaporte, etc.).
-NumeroDoc: Número de documento del vendedor.
-Domicilio: Domicilio del vendedor.
-CodPostal: Código postal del domicilio del vendedor.
-Localidad: Localidad donde reside el vendedor.
-CodProvin: Código de provincia donde reside el vendedor.
-Telefono: Número de teléfono del vendedor.
-EMail: Correo electrónico del vendedor.
-CodGVA23: Código GVA23 (posiblemente un código de referencia interno).
-Observaciones: Observaciones adicionales sobre el vendedor.
-CodGVA18: Código GVA18 (posiblemente otro código de referencia interno).
-RowVersion: Versión de la fila (para control de cambios).
-CamposAdicionales: Campos adicionales para datos no especificados en esta clase.
-IdGVA23: ID de GVA23 (posiblemente un identificador único).
-IdGVA18: ID de GVA18 (posiblemente un identificador único).
-IdTipoDocumentoGv: ID del tipo de documento en el sistema GVA.
-```
-
-[<sub>Volver</sub>](#inicio)
 
 <a name="TransporteDto"></a>
 
 ### Ejemplo de JSON para la API REST basado en `TransporteDto`
 ```json
 {
-    "CodigoTransporte": 85,
-    "CUITTransporte": "30-70761670-5",
-    "DomicilioTransporte": "Colonia 371 Pque.Patricios",
-    "NombreTransporte": "Guillán Hugo y Hnos. S.H.",
-    "PorcentajeRecargo": 0.0,
-    "CodigoPostal": null,
-    "Localidad": null,
-    "CodigoProvincia": null,
-    "Telefono": null,
-    "Email": null,
-    "Web": null,
-    "CodigoGVA24": "85",
-    "Observaciones": null,
-    "CodigoGVA18": null,
-    "IdGVA24": 3,
-    "RowVersion": "0x000000000056F312",
-    "CamposAdicionales": "<CAMPOS_ADICIONALES />",
-    "IdGVA18": null
-  }
-
-Descripción de los Campos 
-CodigoTransporte: Código único que identifica al transporte.
-CUITTransporte: CUIT del transporte.
-DomicilioTransporte: Dirección del transporte.
-NombreTransporte: Nombre del transporte.
-PorcentajeRecargo: Porcentaje de recargo aplicado.
-CodigoPostal: Código postal del transporte.
-Localidad: Localidad donde está ubicado el transporte.
-CodigoProvincia: Código de la provincia donde está ubicado el transporte.
-Telefono: Número de teléfono del transporte.
-Email: Correo electrónico del transporte.
-Web: Página web del transporte.
-CodigoGVA24: Código GVA24, posiblemente un código de referencia interno.
-Observaciones: Observaciones adicionales sobre el transporte.
-CodigoGVA18: Código GVA18, posiblemente otro código de referencia interno.
-IdGVA24: Identificador único de GVA24.
-RowVersion: Versión de la fila para control de cambios.
-CamposAdicionales: Información adicional en formato XML o similar.
-IdGVA18: Identificador único de GVA18.
-
-```
-
-[<sub>Volver</sub>](#inicio)
-
-<a name="VentasTalonariosDto"></a>
-
-### Ejemplo de JSON para la API REST basado en `VentasTalonariosDto`
-```json
-{
-    "IdGVA43": 106,
-    "CAI": "",
-    "CFCopias": 0,
-    "Comprobante": "PED",
-    "ControlFiscal": 0,
-    "Descripcion": "PEDIDO COSACO",
-    "Destino": "USB002",
-    "Duplica": 0,
-    "EditaNumero": 0,
-    "FechaVencimiento": "2222-01-01T00:00:00",
-    "ModeloControlFiscal": "",
-    "NumeroDesde": 1,
-    "NumeroHasta": 999999,
-    "ProximoNumero": "7407437B53790666",
-    "Renglones": 100,
-    "Sucursal": 1,
-    "TipoFormulario": 1,
-    "Talonario": "",
-    "TipoComprobante": "PED",
-    "Exclusivo": 0,
-    "CodigoCaja": "",
-    "Manual": 0,
-    "NumeroAutorizacion": "",
-    "Llave1": "",
-    "Llave2": "",
-    "FechaAviso": "1800-01-01T00:00:00",
-    "ValorFecha": 0,
-    "DocumentoElectronico": 0,
-    "MetodoControlDe": "L",
-    "ImagenTipo": "I",
-    "DestinoDeImpresion": "1",
-    "ImportacionDeDatos": 0,
-    "EnviaPorCorreo": 0,
-    "CodigoDocumentoElectronico": 0,
-    "SucursalDestino": 0,
-    "UsaSistemaImpresion": 0,
-    "RutaPdf": "S",
-    "UtilizaBonoFiscal": 0,
-    "GuardaCopiaPdf": 0,
-    "TipoTalonario": "",
-    "Observaciones": "NO_CONTROLA",
-    "NumeracionPreimpresa": 0,
-    "MetodoImpresionComprobantes": "",
-    "ConCbuInformado": 0,
-    "Recibo": 0,
-    "UsaUsb": 0,
-    "ComprobanteCredito": 0,
-    "PublicaComprobanteTangoTiendas": 0,
-    "MetodoExportacion": 0,
-    "TipoAutorizacion": "",
-    "IdGVA43TalonarioCAEA": 0,
-    "UsaDestinoImpresionEnPdf": 0
+  "CodigoTransporte": "TRA001",
+  "CUITTransporte": "30-12345678-9",
+  "DomicilioTransporte": "Dirección Ejemplo",
+  "NombreTransporte": "Transporte Ejemplo",
+  "CodigoPostal": "1234",
+  "Localidad": "Localidad Ejemplo",
+  "CodigoProvincia": "BA",
+  "Telefono": "123-456-7890",
+  "Email": "transporte@ejemplo.com",
+  "Observaciones": "Observaciones Ejemplo"
 }
-
-Descripción de los Campos 
-IdGVA43: Identificador único del talonario.
-CAI: Código de Autorización de Impresión del comprobante.
-CFCopias: Cantidad de copias del comprobante.
-Comprobante: Tipo de comprobante (e.g., FAC, CRE, REM).
-ControlFiscal: Control fiscal del comprobante.
-Descripcion: Descripción del talonario.
-Destino: Destino del talonario.
-Duplica: Indica si se duplica el talonario.
-EditaNumero: Indica si se puede editar el número del talonario.
-FechaVencimiento: Fecha de vencimiento del talonario.
-ModeloControlFiscal: Modelo del control fiscal.
-NumeroDesde: Número desde el cual empieza la numeración del talonario.
-NumeroHasta: Número hasta el cual llega la numeración del talonario.
-ProximoNumero: Próximo número en la secuencia del talonario.
-Renglones: Cantidad de renglones del talonario.
-Sucursal: Sucursal asociada al talonario.
-TipoFormulario: Tipo de formulario utilizado.
-Talonario: Tipo de talonario.
-TipoComprobante: Tipo de comprobante (e.g., A, B, C).
-Exclusivo: Indica si es exclusivo para cierto uso.
-CodigoCaja: Código de caja asociado al talonario.
-Manual: Indica si el talonario es manual.
-NumeroAutorizacion: Número de autorización del comprobante.
-Llave1: Llave primaria del registro.
-Llave2: Llave secundaria del registro.
-FechaAviso: Fecha de aviso del talonario.
-ValorFecha: Valor de la fecha.
-DocumentoElectronico: Indica si es un documento electrónico.
-MetodoControlDe: Método de control del comprobante.
-ImagenTipo: Tipo de imagen.
-DestinoDeImpresion: Destino de impresión.
-ImportacionDeDatos: Importación de datos.
-EnviaPorCorreo: Indica si se envía por correo.
-CodigoDocumentoElectronico: Código del documento electrónico.
-SucursalDestino: Sucursal destino.
-UsaSistemaImpresion: Indica si se usa un sistema de impresión.
-RutaPdf: Ruta del archivo PDF.
-UtilizaBonoFiscal: Indica si se utiliza bono fiscal.
-GuardaCopiaPdf: Indica si se guarda una copia en PDF.
-TipoTalonario: Tipo de talonario.
-Observaciones: Observaciones adicionales.
-NumeracionPreimpresa: Indica si la numeración está preimpresa.
-MetodoImpresionComprobantes: Método de impresión de comprobantes.
-ConCbuInformado: Indica si se tiene informado el CBU.
-Recibo: Indica si es un recibo.
-UsaUsb: Indica si se utiliza USB.
-ComprobanteCredito: Indica si es un comprobante de crédito.
-PublicaComprobanteTangoTiendas: Indica si se publica el comprobante en Tango Tiendas.
-MetodoExportacion: ID del método de exportación.
-TipoAutorizacion: Tipo de autorización.
-IdGVA43TalonarioCAEA: Identificador del talonario CAEA.
-UsaDestinoImpresionEnPdf: Indica si se utiliza la impresión de destino en PDF.
+CodigoTransporte: Código único que identifica al transporte. Caracteres permitidos: 10. Tipo Texto. Ejemplo: "TRA001".
+CUITTransporte: CUIT del transporte. Caracteres permitidos: 20. Tipo Texto. Ejemplo: "30-12345678-9".
+DomicilioTransporte: Dirección del transporte. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Dirección Ejemplo".
+NombreTransporte: Nombre del transporte. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Transporte Ejemplo".
+CodigoPostal: Código postal del transporte. Caracteres permitidos: 8. Tipo Texto. Ejemplo: "1234".
+Localidad: Localidad donde está ubicado el transporte. Caracteres permitidos: 50. Tipo Texto. Ejemplo: "Localidad Ejemplo".
+CodigoProvincia: Código de la provincia donde está ubicado el transporte. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "BA".
+Telefono: Número de teléfono del transporte. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "123-456-7890".
+Email: Correo electrónico del transporte. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "transporte@ejemplo.com".
+Observaciones: Observaciones adicionales sobre el transporte. Tipo Texto. Ejemplo: "Observaciones Ejemplo".
 ```
 
 [<sub>Volver</sub>](#inicio)
@@ -769,279 +838,31 @@ UsaDestinoImpresionEnPdf: Indica si se utiliza la impresión de destino en PDF.
 ### Ejemplo de JSON para la API REST basado en `ProveedorDto`
 ```json
 {
-  "CPostal": "1000",
-  "CitiOpera": "Operación Principal",
-  "CitiTipo": "Tipo A",
-  "ClasSiap": "Categoría 1",
-  "Clausula": "Cláusula especial para proveedores",
-  "CodProvee": "PROV001",
-  "CondCompr": "Contado",
-  "CondIVA": "Responsable Inscripto",
-  "Contacto": "Juan Pérez",
-  "ContFiscal": "SI",
-  "Domicilio": "Avenida Siempreviva 123, Piso 5, Oficina A",
-  "Email": "juan.pere@empresa.com",
-  "FechaAlta": "2023-04-15T10:30:00Z",
-  "FechaAnt": "2022-12-31T23:59:59Z",
-  "FechaInha": null,
-  "FechaVto": "2024-12-31T23:59:59Z",
-  "IdExterno": "EXT-12345",
-  "IdInterno": "INT-67890",
-  "IIL": 0.21,
-  "IIS": 0.105,
-  "IncIILis": false,
-  "IncIVALi": false,
-  "IVAL": 0.21,
-  "IVAS": 0.105,
-  "LetraHabi": "A",
-  "LimCredit": 100000,
-  "Localidad": "Buenos Aires",
-  "MonCteHa": "ARS",
-  "NCuit": "20-34567890-9",
-  "NIngBrut": "12345678",
-  "NIva": "98765432",
-  "NomProvee": "Empresa Proveedora S.A.",
-  "Observaciones": "Proveedor clave para el proyecto X",
-  "Observac2": "Condiciones especiales de pago",
-  "Orden": 1,
-  "Provincia": "Buenos Aires",
-  "RNI": false,
-  "SaldoAnt": 1000,
-  "SaldoCC": 500,
-  "SaldoDoc": 200,
-  "SaldoCUnidades": 10,
-  "TForm": "Factura A",
-  "Telefono1": "11-4444-5555",
-  "Telefono2": "11-6666-7777",
-  "Tipo": "Proveedor General",
-  "TipoDoc": "CUIT",
-  "FechaModi": "2023-05-10T15:00:00Z",
-  "ExpSaldo": 1500,
-  "Exporta": true,
-  "NomFant": "Proveedor SA",
-  "CodDeposi": "DEP001",
-  "CodSector": "SECTOR1",
-  "CodGasto": "GASTO1",
-  "CodConiva": "CONIVA1",
-  "CodCoexe": "COEXE1",
-  "ListaXml": "LISTA.XML",
-  "TalonarioXml": "TALONARIO.XML",
-  "ArtFletes": "FLETE01",
-  "ArtSeguro": "SEGURO01",
-  "CodComFon": "COMFON01",
-  "CodCtaDeb": "CTA_DEBITO",
-  "CodCtaFon": "CTA_FONDO",
-  "CodOperac": "OP001",
-  "ProvElect": true,
-  "SucurOri": "SUCURSAL01",
-  "InfIVA": "Informacion adicional sobre IVA",
-  "CFondoPM": "FONDO_PM",
-  "DiasChPM": 30,
-  "CFunicaPM": "UNICO_PM",
-  "PagoChe": true,
-  "EmailDe": "destino@ejemplo.com",
-  "HabilPM": true,
-  "Web": "https://www.proveedorsa.com",
-  "CodRubro": "RUBRO01",
-  "CtaPro": "CTA_PROVEEDOR",
-  "CtoPro": "CONTRATO_PROVEEDOR",
-  "CalcuRet": true,
-  "NumAutoma": "AUT001",
-  "TasienDeb": 1.2,
-  "TasienCre": 0.8,
-  "TasienFac": 1.1,
-  "CodCPA01": "CPA01_COD",
-  "Cbu": "0111222233334444555566",
-  "OCObligatoria": true,
-  "EmailOp": "operaciones@empresa.com",
-  "EmailOC": "ordenescompra@empresa.com",
-  "Rg3572EmpresaVinculadaProveedor": "SI",
-  "Rg3572TipoOperacionHabitualProveedor": "VENTA",
-  "Rg3685TipoOperacionCompras": "COMPRA",
-  "Rg3685ComprobanteCompras": "FACTURA",
-  "Rg3685GeneraInformacion": true,
-  "EditaComprobanteReferenciaFacturaRemito": true,
-  "DefectoComprobanteReferenciaFacturaRemito": "FACTURA",
-  "EditaComprobanteReferenciaFactura": true,
-  "DefectoComprobanteReferenciaFactura": "FACTURA",
-  "EditaComprobanteReferenciaRemito": true,
-  "DefectoComprobanteReferenciaRemito": "REMITO",
-  "IngresaFacturaSinRemitoAsociado": true,
-  "IngresaFletePorRenglon": true,
-  "MonedaLimiteCreditoCte": "USD",
-  "SaldoCCUnidades": 5,
-  "SaldoAnteriorUnidades": 12,
-  "Observaciones": "Observaciones adicionales",
-  "DomicilioComercial": "Avenida Principal 123",
-  "TelefonoMovil": "15-1111-2222",
-  "PorcDesc": 5,
-  "IdCPA01": "CPA01_ID",
-  "TextoIB1": "Texto IB1",
-  "TextoIB2": "Texto IB2",
-  "TextoIB3": "Texto IB3",
-  "TextoIB4": "Texto IB4",
-  "Texto": "Texto adicional",
-  "CBU2": "0111222233334444555567",
-  "CBU3": "0111222233334444555568",
-  "DescripcionCBU": "Cuenta corriente",
-  "DescripcionCBU2": "Cuenta sueldo",
-  "DescripcionCBU3": "Cuenta ahorro",
-  "ConversorClausulaDiferenciaEstados": true,
-  "RowVersion": "AQIDBA==",
-  "CamposAdicionales": "{\"ContactoAlternativo\":\"María Gómez\",\"TelefonoMovil\":\"155555555\"}",
-  "IdTipoDocumentoGV": "DNI",
-  "IdCPA57": "CPA5701",
-  "IdGVA151": "GVA15101",
-  "IdCategoriaIVACondIVA": "CAT_IVA_1",
-  "IdOperacionAFIPRG3685TipoOperacionCompras": "OP_COMPRA",
-  "IdTipoComprobanteAFIPRG3685ComprobanteCompras": "FACT_A",
-  "IdRG3572TipoOperacionHabitualProveedor": "VENTA_MAYORISTA",
-  "IdIVAClasificacionSIAPClasSIAP": "CLAS_SIAP_1",
-  "IdSBA01CFondoPM": "FONDO_PM_1",
-  "IdSBA01CFunicaPM": "UNICO_PM_1",
-  "IdCondicionCompra": "COND_COMPRA_1",
-  "IdSucurOri": "SUCURSAL_ORIGEN",
-  "CMVigenciaCoeficiente": 1.1,
-  "IdSucursalDestino": "SUCURSAL_DESTINO",
-  "Habilitado": true
+  "CodProvee": "PROV01",
+  "CPostal": "1234",
+  "Domicilio": "Dirección Ejemplo",
+  "Email": "proveedor@ejemplo.com",
+  "Localidad": "Localidad Ejemplo",
+  "NCuit": "30-12345678-9",
+  "NomProvee": "Proveedor Ejemplo",
+  "Observacion": "Observación Ejemplo",
+  "ObservacionAdic": "Observación Adicional Ejemplo",
+  "Telefono1": "123-456-7890",
+  "Telefono2": "987-654-3210",
+  "Habilitado": 1
 }
-
-Descripción de los Campos 
-CPostal: Código postal del proveedor.
-CitiOpera: Operación de Citi.
-CitiTipo: Tipo de Citi.
-ClasSiap: Clasificación SIAP.
-Clausula: Cláusula específica.
-CodProvee: Código del proveedor.
-CondCompr: Condición de compra.
-CondIVA: Condición ante el IVA.
-Contacto: Persona de contacto del proveedor.
-ContFiscal: Control fiscal del proveedor.
-Domicilio: Dirección física del proveedor.
-Email: Correo electrónico del proveedor.
-FechaAlta: Fecha de alta del proveedor.
-FechaAnt: Fecha anterior registrada.
-FechaInha: Fecha de inhabilitación del proveedor.
-FechaVto: Fecha de vencimiento.
-IdExterno: Identificador externo del proveedor.
-IdInterno: Identificador interno del proveedor.
-IIL: Impuesto Interno Libre.
-IIS: Impuesto Interno Sobre.
-IncIILis: Inclusión en lista de Impuesto Interno Libre.
-IncIVALi: Inclusión en lista de IVA Libre.
-IVAL: IVA Libre.
-IVAS: IVA Sobre.
-LetraHabi: Letra habilitada para el proveedor.
-LimCredit: Límite de crédito asignado al proveedor.
-Localidad: Localidad del proveedor.
-MonCteHa: Moneda de cuenta habilitada.
-NCuit: Número de CUIT del proveedor.
-NIngBrut: Número de ingresos brutos.
-NIva: Número de IVA.
-NomProvee: Nombre del proveedor.
-Observacio: Observaciones adicionales.
-Observac2: Segunda observación adicional.
-Orden: Orden del proveedor.
-Provincia: Provincia donde se ubica el proveedor.
-RNI: Responsable no inscripto.
-SaldoAnt: Saldo anterior.
-SaldoCC: Saldo en cuenta corriente.
-SaldoDoc: Saldo del documento.
-SaldoCUnidades: Saldo en unidades.
-TForm: Tipo de formulario utilizado.
-Telefono1: Primer número de teléfono.
-Telefono2: Segundo número de teléfono.
-Tipo: Tipo de proveedor.
-TipoDoc: Tipo de documento del proveedor.
-FechaModi: Fecha de la última modificación.
-ExpSaldo: Saldo exportado.
-Exporta: Indica si el proveedor exporta.
-NomFant: Nombre de fantasía del proveedor.
-CodDeposi: Código del depósito asociado.
-CodSector: Código del sector del proveedor.
-CodGasto: Código de gasto asociado al proveedor.
-CodConiva: Código de condición frente al IVA.
-CodCoexe: Código de condición de exención.
-ListaXml: Lista XML asociada al proveedor.
-TalonarioXml: Talonario XML asociado.
-ArtFletes: Artículo de fletes asociado.
-ArtSeguro: Artículo de seguro asociado.
-CodComFon: Código de comisión de fondo.
-CodCtaDeb: Código de cuenta de débito.
-CodCtaFon: Código de cuenta de fondo.
-CodOperac: Código de operación del proveedor.
-ProvElect: Indica si es un proveedor electrónico.
-SucurOri: Sucursal de origen.
-InfIVA: Información del IVA.
-CFondoPM: Código de fondo para PM.
-DiasChPM: Días de cheque para PM.
-CFunicaPM: Código único para PM.
-PagoChe: Pago con cheque.
-EmailDe: Email de destino.
-HabilPM: Indica si está habilitado para PM.
-Web: Sitio web del proveedor.
-CodRubro: Código de rubro del proveedor.
-CtaPro: Cuenta del proveedor.
-CtoPro: Contrato del proveedor.
-CalcuRet: Indica si se calcula retención.
-NumAutoma: Número automático.
-TasienDeb: Tasa de asiento de débito.
-TasienCre: Tasa de asiento de crédito.
-TasienFac: Tasa de asiento de factura.
-CodCPA01: Código CPA01.
-Cbu: Clave Bancaria Uniforme del proveedor.
-OCObligatoria: Indica si la orden de compra es obligatoria.
-EmailOp: Email de operación.
-EmailOC: Email para orden de compra.
-Rg3572EmpresaVinculadaProveedor: Empresa vinculada al proveedor según RG 3572.
-Rg3572TipoOperacionHabitualProveedor: Tipo de operación habitual del proveedor según RG 3572.
-Rg3685TipoOperacionCompras: Tipo de operación de compras según RG 3685.
-Rg3685ComprobanteCompras: Comprobante de compras según RG 3685.
-Rg3685GeneraInformacion: Indica si se genera información según RG 3685.
-EditaComprobanteReferenciaFacturaRemito: Indica si se puede editar el comprobante de referencia factura/remito.
-DefectoComprobanteReferenciaFacturaRemito: Indica el defecto en el comprobante de referencia factura/remito.
-EditaComprobanteReferenciaFactura: Indica si se puede editar el comprobante de referencia factura.
-DefectoComprobanteReferenciaFactura: Indica el defecto en el comprobante de referencia factura.
-EditaComprobanteReferenciaRemito: Indica si se puede editar el comprobante de referencia remito.
-DefectoComprobanteReferenciaRemito: Indica el defecto en el comprobante de referencia remito.
-IngresaFacturaSinRemitoAsociado: Indica si se puede ingresar una factura sin remito asociado.
-IngresaFletePorRenglon: Indica si se ingresa flete por renglón.
-MonedaLimiteCreditoCte: Moneda límite de crédito en cuenta corriente.
-SaldoCCUnidades: Saldo en unidades en cuenta corriente.
-SaldoAnteriorUnidades: Saldo anterior en unidades.
-Observaciones: Observaciones adicionales.
-DomicilioComercial: Domicilio comercial del proveedor.
-TelefonoMovil: Número de teléfono móvil.
-PorcDesc: Porcentaje de descuento.
-IdCPA01: Identificador CPA01.
-TextoIB1: Texto adicional de Ingresos Brutos 1.
-TextoIB2: Texto adicional de Ingresos Brutos 2.
-TextoIB3: Texto adicional de Ingresos Brutos 3.
-TextoIB4: Texto adicional de Ingresos Brutos 4.
-Texto: Texto adicional.
-Cbu2: Segunda Clave Bancaria Uniforme del proveedor.
-Cbu3: Tercera Clave Bancaria Uniforme del proveedor.
-DescripcionCbu: Descripción del CBU.
-DescripcionCbu2: Descripción del CBU 2.
-DescripcionCbu3: Descripción del CBU 3.
-ConversorClausulaDiferenciaEstados: Conversor de cláusula para diferencia de estados.
-RowVersion: Versión de la fila.
-CamposAdicionales: Campos adicionales del proveedor.
-IdTipoDocumentoGV: Identificador del tipo de documento GV.
-IdCPA57: Identificador CPA57.
-IdGVA151: Identificador de la tabla GVA151.
-IdCategoriaIVACondIVA: Identificador de la categoría de IVA y condición de IVA.
-IdOperacionAFIPRG3685TipoOperacionCompras: Identificador de operación AFIP RG3685.
-IdTipoComprobanteAFIPRG3685ComprobanteCompras: Identificador de tipo de comprobante AFIP RG3685.
-IdRG3572TipoOperacionHabitualProveedor: Identificador de operación habitual RG3572.
-IdIVAClasificacionSIAPClasSIAP: Identificador de clasificación SIAP.
-IdSBA01CFondoPM: Identificador de fondo PM.
-IdSBA01CFunicaPM: Identificador único PM.
-IdCondicionCompra: Identificador de condición de compra.
-IdSucurOri: Identificador de la sucursal de origen.
-CMVigenciaCoeficiente: Coeficiente de vigencia.
-IdSucursalDestino: Identificador de la sucursal de destino.
-Habilitado: Indica si el proveedor está habilitado.
+CodProvee: Código del proveedor. Caracteres permitidos: 6. Tipo Texto. Ejemplo: "PROV01".
+CPostal: Código postal del proveedor. Caracteres permitidos: 8. Tipo Texto. Ejemplo: "1234".
+Domicilio: Dirección física del proveedor. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Dirección Ejemplo".
+Email: Correo electrónico del proveedor. Caracteres permitidos: 255. Tipo Texto. Ejemplo: "proveedor@ejemplo.com".
+Localidad: Localidad del proveedor. Caracteres permitidos: 20. Tipo Texto. Ejemplo: "Localidad Ejemplo".
+NCuit: Número de CUIT del proveedor. Caracteres permitidos: 15. Tipo Texto. Ejemplo: "30-12345678-9".
+NomProvee: Nombre del proveedor. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Proveedor Ejemplo".
+Observacion: Observaciones adicionales. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Observación Ejemplo".
+ObservacionAdic: Segunda observación adicional. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Observación Adicional Ejemplo".
+Telefono1: Primer número de teléfono. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "123-456-7890".
+Telefono2: Segundo número de teléfono. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "987-654-3210".
+Habilitado: Indica si el proveedor está habilitado. Valores permitidos: 1 (Sí) o 0 (No). Ejemplo: 1.
 ```
 
 [<sub>Volver</sub>](#inicio)
@@ -1052,38 +873,48 @@ Habilitado: Indica si el proveedor está habilitado.
 
 ```json
 {
-  "CodArticu": "ART12345",
-  "Cantidad": 100.5,
-  "CodDeposito": "01",
-  "TipoComprobante": "FAC",
-  "NumeroComprobante": "00012345678901",
-  "CodProveedor": "PR001",
-  "Fecha": "2024-11-15T12:34:56",
-  "NumeroPartida": "PART123456789",
-  "FechaVencimiento": "2025-12-31T00:00:00",
-  "Comentario": "Stock inicial",
-  "IdUsuario": 101,
-  "NombreUsuario": "Juan Pérez",
+  "CodArticu": "123456 ALE00",
+  "Cantidad": 50.500000,
+  "CodDeposito": "FF",
+  "CodProveedor": "XXX123",
+  "NumeroPartida": "AR123456",
+  "FechaVencimiento": "2025-12-31T12:00:00",
+  "Observacion": "Movimiento de stock",
+  "IdUsuario": 1,
   "Guid": "550e8400-e29b-41d4-a716-446655440000",
-  "IdDb": "2024-11-15T12:34:56",
-  "TipoMovimiento": "E"
+  "TipoMovimiento": "E",
+  "TipoComprobanteInt": "FA",
+  "NumeroComprobanteInt": "000123",
+  "IdUbi": 20,
+  "TipoComprobanteRef": 11,
+  "NumeroComprobanteRef": "00054321",
+  "RengCompRef": 1,
+  "Idp": 789,
+  "Dispositivo": "PC-001",
+  "TipoRechazo": 0,
+  "T_Comp": "ING"
 }
-Descripción de los Campos 
-CodArticu: Código del artículo relacionado con el movimiento de stock.
-Cantidad: Cantidad del artículo en el movimiento.
-CodDeposito: Código del depósito donde se realiza el movimiento.
-TipoComprobante: Tipo de comprobante asociado al movimiento.
-NumeroComprobante: Número de comprobante asociado al movimiento.
-CodProveedor: Código del proveedor relacionado con el movimiento.
-Fecha: Fecha del movimiento de stock.
-NumeroPartida: Número de partida asociado al artículo en el movimiento.
-FechaVencimiento: Fecha de vencimiento del artículo (si aplica).
-Comentario: Comentario asociado al movimiento.
-IdUsuario: Identificador del usuario que realiza el movimiento.
-NombreUsuario: Nombre del usuario que realiza el movimiento.
-Guid: Identificador único del movimiento.
-IdDb: Identificador de la base de datos del movimiento.
-TipoMovimiento: Tipo de movimiento (E: entrada, S: salida).
+
+CodArticu: Código del artículo relacionado con el movimiento de stock. Caracteres permitidos: 15. Tipo Texto. Ejemplo: "123456 ALE00".
+Cantidad: Cantidad del artículo en el movimiento. Tipo Decimal (16,6). Ejemplo: 50.500000.
+CodDeposito: Código del depósito donde se realiza el movimiento. Caracteres permitidos: 2. Tipo Texto. Ejemplo: "FF".
+CodProveedor: Código del proveedor relacionado con el movimiento. Caracteres permitidos: 6. Tipo Texto. Ejemplo: "XXX123".
+NumeroPartida: Número de partida asociado al artículo en el movimiento. Caracteres permitidos: 25. Tipo Texto. Ejemplo: "AR123456".
+FechaVencimiento: Fecha de vencimiento del artículo (si aplica). Formato: "yyyy-MM-ddTHH:mm:ss". Ejemplo: "2025-12-31T12:00:00".
+Observacion: Observación del movimiento. Caracteres permitidos: 20. Tipo Texto. Ejemplo: "Movimiento de stock".
+IdUsuario: Identificador del usuario que realiza el movimiento. Tipo Entero. Ejemplo: 1.
+Guid: Identificador único del movimiento. Tipo GUID. Ejemplo: "550e8400-e29b-41d4-a716-446655440000".
+TipoMovimiento: Tipo de movimiento (entrada/salida). Caracteres permitidos: 1. Ejemplo: 'E' (Entrada) o 'S' (Salida).
+TipoComprobanteInt: Tipo de comprobante interno asociado al movimiento. Caracteres permitidos: 2. Ejemplo: "FA".
+NumeroComprobanteInt: Número de comprobante interno asociado al movimiento. Caracteres permitidos: 6. Ejemplo: "000123".
+IdUbi: Identificador de la ubicación. Tipo Entero. Ejemplo: 20.
+TipoComprobanteRef: Tipo de comprobante de referencia asociado al movimiento. Tipo Entero. Ejemplo: 11.
+NumeroComprobanteRef: Número de comprobante de referencia asociado al movimiento. Caracteres permitidos: 14. Tipo Texto. Ejemplo: "00054321".
+RengCompRef: Renglón del comprobante interno asociado al movimiento. Tipo Entero. Ejemplo: 1.
+Idp: Identificador del pallet (IDP). Tipo Entero. Ejemplo: 789.
+Dispositivo: Dispositivo desde el que se realiza el movimiento. Caracteres permitidos: 100. Tipo Texto. Ejemplo: "PC-001".
+TipoRechazo: Tipo de rechazo del movimiento. Tipo Entero. Ejemplo: 0 (Sin rechazo).
+T_Comp: Tipo de comprobante. Caracteres permitidos: 3. Ejemplo: "EGR" (Egreso) o "ING" (Ingreso).
 
 ```
 [<sub>Volver</sub>](#inicio)

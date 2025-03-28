@@ -16,15 +16,25 @@ Arison WMS | TMS - API REST Integración
   - [Gestión de las configuraciones](#gestion)
   - [Selección del ambiente](#ambientesseleccion)
 - [Datos JSON](#datosjson)
-  - [ClienteDto](#ClienteDTO)
   - [ArticuloDto](#ArticuloDto)
-  - [RequerimientoDto](#RequerimientoDto)
+  - [ClienteDto](#ClienteDto)
+  - [CondicionDeVentaDto](#CondicionDeVentaDto)
+  - [CotizacionDto](#CotizacionDto)
   - [DepositoDto](#DepositoDto)
-  - [VendedorDto](#VendedorDto)
-  - [TransporteDto](#TransporteDto)
-  - [VentasTalonariosDto](#VentasTalonariosDto)
-  - [ProveedorDto](#ProveedorDto)
+  - [EscalaDto](#EscalaDto)
+  - [ListaDePreciosDto](#ListaDePreciosDto)
+  - [MonedaDto](#MonedaDto)
   - [MovimientoStockDto](#MovimientoStockDto)
+  - [OrdenesDeCompraEncabezadosDto](#OrdenesDeCompraEncabezadosDto)
+  - [OrdenesDeCompraRenglonesDto](#OrdenesDeCompraRenglonesDto)
+  - [ProveedorDto](#ProveedorDto)
+  - [RequerimientoResponseDto](#RequerimientoResponseDto)
+  - [RequerimientoVentaDto](#RequerimientoVentaDto)
+  - [TalonariosDeOrdenesDto](#TalonariosDeOrdenesDto)
+  - [TalonariosDeVentasDto](#TalonariosDeVentasDto)
+  - [TransporteDto](#TransporteDto)
+  - [ValoresEscalaDto](#ValoresEscalaDto)
+  - [VendedoresDto](#VendedoresDto)
 - [Requerimientos de Hardware](#requerimientoshardware)
   - [Servidor](#Servidor)
   - [Estación de trabajo](#Cliente)
@@ -216,6 +226,150 @@ volumen: Volumen del artículo en la unidad correspondiente. Ejemplo: 1.75.
 ```
 
 [<sub>Volver</sub>](#inicio)
+
+<a name= "CondicionDeVentaDto"></a>
+## Ejemplo de Json basado en `CondicionDeVentaDto`
+
+```json
+{
+  "CondVta": 1,
+  "Filler": "Valor de relleno",
+  "DescCond": "Descripción de la condición de venta",
+  "NroDeList": 1,
+  "Observaciones": "Observaciones de la condición de venta",
+  "GeneraFechasAlternativas": "S",
+  "FechaVigDesde": "2024-03-15T00:00:00",
+  "FechaVigHasta": "2024-12-31T23:59:59"
+}
+
+CondVta: Identificador condición de venta. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Filler: Campo de uso interno. Texto (OBLIGATORIO).
+DescCond: Descripción Condición de venta. Caracteres permitidos: 60. Tipo Texto. Ejemplo: "Contado".
+NroDeList: Número de lista de condición de venta. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Observaciones: Observaciones. Caracteres permitidos: 255. Tipo Texto. Ejemplo: "Condición especial para clientes mayoristas".
+GeneraFechasAlternativas: Genera fechas alternativas para condición de ventas. Caracteres permitidos: 1. Tipo Texto. Ejemplo: "S".
+FechaVigDesde: Fecha vigente desde. Ejemplo: "2024-01-01T00:00:00".
+FechaVigHasta: Fecha vigente hasta. Ejemplo: "2024-12-31T23:59:59".
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "CotizacionDto"></a>
+## Ejemplo de Json basado en `CotizacionDto`
+```json
+{
+  "IdMoneda": 1,
+  "FechaHora": "2024-03-15T10:30:00",
+  "Cotizacion": 120.50
+}
+
+IdMoneda: Identificador de moneda. Valores permitidos: Enteros positivos. Ejemplo: 1. (OBLIGATORIO)
+FechaHora: Fecha y Hora de cotización. Ejemplo: "2024-03-15T10:30:00".
+Cotizacion: Precio cotización. Valores permitidos: Decimal positivo con hasta 6 decimales. Ejemplo: 120.50.
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "EscalaDto"></a>
+## Ejemplo de Json basado en `EscalaDto`
+```json
+{
+  "CodEscala": "A1",
+  "Descripcion": "Escala de precios mayoristas",
+  "NroEscala": 1,
+  "Observaciones": "Esta escala aplica para clientes con volumen de compra superior a 100 unidades."
+}
+
+CodEscala: Código identificatorio de la Escala (Obligatorio). Caracteres permitidos: 2. Tipo Texto. Ejemplo: "A1".
+Descripcion: Descripción de la escala. Caracteres permitidos: 30. Tipo Texto. Ejemplo: "Escala de precios minoristas".
+NroEscala: Número de escala. Valores permitidos: Enteros positivos. Ejemplo: 1.
+Observaciones: Observaciones adicionales. Caracteres permitidos: 1000. Tipo Texto. Ejemplo: "Aplica para todos los productos de la categoría X.".
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "ListaDePreciosDto"></a>
+## Ejemplo de Json basado en `ListaDePreciosDto`
+```json
+{
+  "Filler": "Valor de relleno",
+  "Decimales": 2,
+  "FechaDesde": "2024-01-01T00:00:00",
+  "FechaHasta": "2024-12-31T23:59:59",
+  "Habilitada": 1,
+  "IncluyeImp": 0,
+  "IncluyeIva": 1,
+  "MonCte": 1,
+  "NombreList": "Lista Mayorista",
+  "NroList": 1,
+  "Observacion": "Lista de precios para clientes mayoristas con descuentos especiales."
+}
+
+Filler: Campo de uso interno. Texto.
+Decimales: Cantidad de decimales. Valores permitidos: Enteros positivos. Ejemplo: 2.
+FechaDesde: Fecha vigente de lista de precio Desde. Ejemplo: "2024-01-01T00:00:00".
+FechaHasta: Fecha vigente de lista de precio Hasta. Ejemplo: "2024-12-31T23:59:59".
+Habilitada: Lista de precios habilitada. Valores permitidos: Entero. Ejemplo: 1: Sí | 0: No.
+IncluyeImp: Incluye impuesto. Valores permitidos: Entero. Ejemplo: 1: Sí | 0: No.
+IncluyeIva: Incluye IVA. Valores permitidos: Entero. Ejemplo: 1: Sí | 0: No.
+MonCte: Utiliza moneda corriente. Valores permitidos: Entero. Ejemplo: 1: Sí | 0: No.
+NombreList: Descripción de lista de precios. Caracteres permitidos: 20. Tipo Texto. Ejemplo: "Lista Minorista".
+NroList: Número identificador de lista. (OBLIGATORIO). Valores permitidos: Enteros positivos. Ejemplo: 1.
+Observacion: Observaciones adicionales. Caracteres permitidos: -. Tipo Texto. Ejemplo: "Lista de precios para ventas al público en general.".
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "MonedaDto"></a>
+## Ejemplo de Json basado en `MonedaDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "OrdenesDeCompraEncabezadosDto"></a>
+## Ejemplo de Json basado en `OrdenesDeCompraEncabezadosDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "OrdenesDeCompraRenglonesDto"></a>
+## Ejemplo de Json basado en `OrdenesDeCompraRenglonesDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "RequerimientoResponseDto"></a>
+## Ejemplo de Json basado en `RequerimientoResponseDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "RequerimientoVentaDto"></a>
+## Ejemplo de Json basado en `RequerimientoVentaDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "TalonariosDeOrdenesDto"></a>
+## Ejemplo de Json basado en `TalonariosDeOrdenesDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "TalonariosDeVentasDto"></a>
+## Ejemplo de Json basado en `TalonariosDeVentasDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "ValoresEscalaDto"></a>
+## Ejemplo de Json basado en `ValoresEscalaDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
+<a name= "VendedoresDto"></a>
+## Ejemplo de Json basado en `VendedoresDto`
+```json
+```
+[<sub>Volver</sub>](#inicio)
+
 
 <a name="RequerimientoDto"></a>
 

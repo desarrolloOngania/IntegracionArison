@@ -263,8 +263,6 @@ PorcBonif: Porentaje de bonificación. Valores permitidos: Decimal positivo con 
   "Rnpa": "RNPA Ejemplo",
   "CamposAdicionales": "{}"
 }
-¡Claro que sí, pa! ¡Aquí te repito la documentación de los campos del DTO ArticuloDto!
-
 Documentación de los campos del DTO ArticuloDto:
 
 CodigoArticulo: Código del artículo. (OBLIGATORIO). Caracteres permitidos: 15. Ejemplo "123 ALE00".
